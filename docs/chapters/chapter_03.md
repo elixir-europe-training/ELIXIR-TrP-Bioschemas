@@ -129,6 +129,7 @@ This `YAML` header is processed by Jekyll to embed the following JSON-LD within 
     "version":2.0
   }
 ```
+
 This examples uses most of the properties specified in the Bioschemas profile [TrainingMaterial](https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE). 
 
 Once you have inserted the markup (= `YAML` header), save the markdown file file.
@@ -153,6 +154,7 @@ Open tutorial-course.html and add the following:
   </body>
 </html>
 ```
+
 The rather elaborate annotation according to Bioschemas profiles `Course/CourseInstance` looks like this. Note that it is using the annotation for the associated training material, too. This annotation is added via the property `hasPart`.
 
 ```json
@@ -227,5 +229,3 @@ Validate the individual page with the [schema.org validator](https://validator.s
 TODO: Add image from TeSS course
 
 ![screenshot of about schema.org validator](./../assets/images/b369eIQ.png)
-
-
