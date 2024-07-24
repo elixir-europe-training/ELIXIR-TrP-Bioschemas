@@ -42,6 +42,7 @@ markdown_extensions:
   - footnotes
   - tables
   - admonition
+  - addbioschemas
   - codehilite:
       guess_lang: false
   - sane_lists
