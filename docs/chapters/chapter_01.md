@@ -10,7 +10,7 @@ Note that the `CourseInstance` profile is used in tandem with the `Course` profi
 
 ## Setup of the repository
 
-TODO: add folder structure
+TODO: add folder structure / use template -> create repository / image
 
 ## HTML code for a training material page
 
@@ -31,13 +31,19 @@ Open tutorial-material.html and add the following text:
   </body>
 </html>
 ```
-This is an example of an HTML file with three HTML elements - `<html>`, `<head>`, and `<body>`. An HTML element is defined by a start tag, some content, and an end tag. For the outer `html` element (`html` is the tagname), the start tag is `<html>` and the end tag is `</html>`. The `/` in front of the tagname indicates an end tag.
+TODO: add explaination of DOCTYPE
+
+This is an example of an HTML file with three HTML elements - `<html>`, `<head>`, and `<body>`. An HTML element is defined by a start tag, some content, and an end tag. For the outer `html` element (`html` is the tagname), the start tag is `<html>` and the end tag is `</html>`. The `/` in front of the tagname indicates an end tag. 
+
+TODO: what is an attribute?
 
 The `<html>` element is the root element of an HTML page. The `<head>` element contains meta information about the HTML page and the `<body>` element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
 
 TODO: add reference to https://www.w3schools.com/
 
-The markup of the HTML page with the Bioschemas annotation as a JSON-LD object needs to be added to the `<head>` element and be included in a `<script>` element with the attribute `type="application/ld+json"`.
+TODO: what is a JSON-LD object?
+
+As you see in the code example above, the markup of the HTML page with the Bioschemas annotation as a JSON-LD object needs to be added to the `<head>` element and be included in a `<script>` element with the attribute `type="application/ld+json"`.
 
 The rather elaborate annotation according to Bioschemas profile `TrainingMaterial` looks like this:
 
@@ -93,7 +99,7 @@ This examples uses most of the properties specified in the Bioschemas profile [T
 
 TODO: demonstrate tools to edit JSON-LD object template
 
-Once you have inserted the markup (= JSON-LD object), save the HTML file.
+In the example code, replace `insert bioschemas annotation here` by the JSON-LD object and save the HTML file.
 
 ## 1.2 HTML code for a training course page
 Let’s create a new folder called _layouts and have a new empty file called tutorial-course.html inside. This is where our HTML template used to render our tutorial will be.
