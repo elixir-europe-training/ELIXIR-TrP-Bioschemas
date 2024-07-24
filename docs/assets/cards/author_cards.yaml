@@ -1,17 +1,11 @@
-- title: Zeus
+- title: Alexander Botzki
   content: |
-    [:custom-orcid:](https://orcid.org/) [:simple-github:](https://github.com/) [:simple-linkedin:](https://linkedin.com/)<br>
-    Lorem ipsum dolor sit amet.
-  image: ./assets/images/cards/001-zeus.png
+    [:custom-orcid:](https://orcid.org/0000-0001-6691-4233) [:simple-github:](https://github.com/abotzki) [:simple-linkedin:](https://www.linkedin.com/in/alexander-botzki-1323b42/)<br>
+    VIB, ELIXIR-BE
+  image: ./assets/images/cards/alex_portrait.jpg
 
-- title: Athena
+- title: Bruna Piereck
   content: |
-    [:custom-orcid:](https://orcid.org/) [:simple-github:](https://github.com/) [:simple-linkedin:](https://linkedin.com/)<br>
-    Lorem ipsum dolor sit amet.
-  image: ./assets/images/cards/003-athena.png
-
-- title: Poseidon
-  content: |
-    [:custom-orcid:](https://orcid.org/) [:simple-github:](https://github.com/) [:simple-linkedin:](https://linkedin.com/)<br>
-    Lorem ipsum dolor sit amet.
-  image: ./assets/images/cards/007-poseidon.png
+    [:custom-orcid:](https://orcid.org/0000-0001-5958-0669) [:simple-github:](https://github.com/bpiereck) [:simple-linkedin:](https://www.linkedin.com/in/bruna-piereck-moura-a5063526a/)<br>
+    VIB, ELIXIR-BE
+  image: ./assets/images/cards/bruna.png
