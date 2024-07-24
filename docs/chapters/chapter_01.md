@@ -1,5 +1,7 @@
 ## Bioschemas profiles for training resources
 
+[add-bioschemas file='docs/training-material.yaml']
+
 Many training related resources will include pages describing tutorials or courses. As such, they are marked up using the following three profiles:
 
 - `TrainingMaterial`: A profile describing training materials in life sciences, it can be used on its own (as it happens with the Bioschemas tutorials) or in combination with a `CourseInstance`.
