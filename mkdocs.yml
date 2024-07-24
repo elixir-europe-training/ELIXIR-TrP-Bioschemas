@@ -4,8 +4,7 @@ nav:
     - Course Content:
       - "1. Bioschemas annotation of HTML page": chapters/chapter_01.md
       - "2. Bioschemas with Jekyll": chapters/chapter_02.md
-      - "3. Bioschemas with Mkdocs": chapters/chapter_02.md
-      - "References": chapters/references.md
+      - "3. Bioschemas with Mkdocs": chapters/chapter_03.md
     - "Follow up training": follow_up_training.md
 
 theme:
