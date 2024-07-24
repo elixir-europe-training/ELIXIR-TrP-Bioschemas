@@ -1,3 +1,5 @@
+[add-bioschemas file='./docs/training-material.yaml']
+
 # ELIXIR Lesson Title 
 
 ## Authors
