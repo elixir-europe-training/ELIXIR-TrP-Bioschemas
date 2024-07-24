@@ -33,6 +33,7 @@ Open tutorial.html and add the following text:
   </body>
 </html>
 ```
+
 This is an example of an HTML file with three HTML elements - `<html>`, `<head>`, and `<body>`. An HTML element is defined by a start tag, some content, and an end tag. For the outer `html` element (`html` is the tagname), the start tag is `<html>` and the end tag is `</html>`. The `/` in front of the tagname indicates an end tag.
 
 The `<html>` element is the root element of an HTML page. The `<head>` element contains meta information about the HTML page and the `<body>` element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
@@ -79,6 +80,7 @@ bioschemas:
   license: CC-BY 4.0
   version: 2.0
 ```
+
 This `YAML` header is processed by Jekyll to embed the following JSON-LD within the web page. The rather elaborate annotation according to Bioschemas profile `TrainingMaterial` looks like this:
 
 ```json
@@ -129,6 +131,7 @@ This `YAML` header is processed by Jekyll to embed the following JSON-LD within 
     "version":2.0
   }
 ```
+
 This examples uses most of the properties specified in the Bioschemas profile [TrainingMaterial](https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE). 
 
 Once you have inserted the markup (= `YAML` header), save the markdown file file.
@@ -153,6 +156,7 @@ Open tutorial-course.html and add the following:
   </body>
 </html>
 ```
+
 The rather elaborate annotation according to Bioschemas profiles `Course/CourseInstance` looks like this. Note that it is using the annotation for the associated training material, too. This annotation is added via the property `hasPart`.
 
 ```json
@@ -227,5 +231,3 @@ Validate the individual page with the [schema.org validator](https://validator.s
 TODO: Add image from TeSS course
 
 ![screenshot of about schema.org validator](./../assets/images/b369eIQ.png)
-
-
