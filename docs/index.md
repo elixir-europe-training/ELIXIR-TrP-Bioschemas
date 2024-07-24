@@ -1,7 +1,5 @@
 # ELIXIR Lesson Title 
 
-[add-bioschemas file='./docs/training-material.yaml']
-
 ## Authors
 
 [cards class_name="authors" cols="3"(./docs/assets/cards/author_cards.yaml)]
