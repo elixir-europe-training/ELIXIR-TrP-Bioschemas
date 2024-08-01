@@ -12,42 +12,110 @@ Note that the `CourseInstance` profile is used in tandem with the `Course` profi
 
 ## Setup of the Wordpress CMS
 
-TODO: add folder structure / use template -> create repository / image
+### Configuration of the Bioschemas Profile as Schema template
+
+1. Install the [RankMath SEO and RankMth SEO Pro plugins](https://rankmath.com/).
+2. After successfull installation, in the RankMath menu, go to `Schema templates`.
+3. Click on `Add New Schema`
+4. Click on `Import` in the Schema Generator dialogue
+5. Select the `JSON-LD/Custom Code` option in the dropdown of the `Import Schema Code from` field.
+6. Copy and paste the template below in the empty `Custom JSON-LD Code` field.
+7. Click on the `Process Code`
+8. TODO: Click on `Use`
+9. Check the `Display Conditions` field to potentially exclude certain `Post types` of the Wordpress system
+
+Template:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@graph": {
+    "@type": "LearningResource",
+    "@id": "%url%",
+    "dct:conformsTo": {
+      "@type": "CreativeWork",
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+    },
+    "name": "%seo_title%",
+    "url": "%url%",
+    "description": "%seo_description%",
+    "keywords": [
+      "AlphaFold Database (13181)",
+      "second keyword",
+      "third keyword"
+    ],
+    "author": [
+      {
+        "@type": "Person",
+        "name": "%post_author%"
+      },
+      {
+        "@type": "Person",
+        "name": "Alexander Botzki | https://orcid.org/0000-0001-6691-4233"
+      }
+    ],
+    "contributor": [
+      {
+        "@type": "Person",
+        "name": "Kenneth Hoste"
+      }
+    ],
+    "audience": [
+      {
+        "@type": "Audience",
+        "audienceType": "Life scientists with programming skills"
+      }
+    ],
+    "about": [
+      {
+        "@type": "DefinedTerm",
+        "@id": "http://edamontology.org/topic_2814",
+        "inDefinedTermSet": "http://edamontology.org",
+        "name": "Protein structure analysis",
+        "url": "http://edamontology.org/topic_2814"
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "http://edamontology.org/topic_3474",
+        "inDefinedTermSet": "http://edamontology.org",
+        "name": "Machine learning",
+        "url": "http://edamontology.org/topic_3474"
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "http://edamontology.org/topic_0082",
+        "inDefinedTermSet": "http://edamontology.org",
+        "name": "Structure prediction",
+        "url": "http://edamontology.org/topic_0082"
+      }
+    ],
+    "license": "https://spdx.org/licenses/CC-BY-NC-SA-4.0.html",
+    "educationalLevel": "intermediate",
+    "dateCreated": "%date%",
+    "learningResourceType": "hands-on tutorial",
+    "inLanguage": "en-GB",
+    "version": "1.0"
+  }
+}
+```
+
+### Associate the Bioschemas Profile to Post Types
+
+1. TODO: check whether this part is necessary or can be stepped over due to unselection of `Post types` in the Sitemap step
+2. After successfull installation, in the RankMath menu, go to `Schema templates`.
+3. Click on `Add New Schema`
+
+### Configure the Sitemap for your Wordpress system
+
+0. Check whether the sitemap option needs to be activated in the General configuration of the RankMath plugins.
+1. In the RankMath menu, go to `Sitemap Settings`.
+2. In the `General` section, the URL to the sitemap is displayed: `Your sitemap index can be found here: https://your.url.org/sitemap_index.xml`
+3. Manually check all the sections on the left side of the displayed website from `HTML Sitemap` over all `Post Types` and `Taxonomies`. Unselect the slider for all non-relevant Post types and Taxonomies.
+4. Verify the URL whether all relevant links to the pages are shown.
+5. 
 
 ## HTML code for a training material page
 
-Let’s create a new folder called _layouts and have a new empty file called tutorial-material.html inside. This is where our HTML template used to render our tutorial will be.
-
-Open tutorial-material.html and add the following text:
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-      <script type="application/ld+json">
-         insert bioschemas annotation here
-      </script>
-  </head>
-  <body>
-     insert content here
-  </body>
-</html>
-```
-TODO: add explaination of DOCTYPE
-
-This is an example of an HTML file with three HTML elements - `<html>`, `<head>`, and `<body>`. An HTML element is defined by a start tag, some content, and an end tag. For the outer `html` element (`html` is the tagname), the start tag is `<html>` and the end tag is `</html>`. The `/` in front of the tagname indicates an end tag. 
-
-TODO: what is an attribute?
-
-The `<html>` element is the root element of an HTML page. The `<head>` element contains meta information about the HTML page and the `<body>` element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
-
-TODO: add reference to https://www.w3schools.com/
-
-TODO: what is a JSON-LD object?
-
-As you see in the code example above, the markup of the HTML page with the Bioschemas annotation as a JSON-LD object needs to be added to the `<head>` element and be included in a `<script>` element with the attribute `type="application/ld+json"`.
-
-The rather elaborate annotation according to Bioschemas profile `TrainingMaterial` looks like this:
 
 ```json
 {
@@ -104,23 +172,7 @@ TODO: demonstrate tools to edit JSON-LD object template
 In the example code, replace `insert bioschemas annotation here` by the JSON-LD object and save the HTML file.
 
 ## 1.2 HTML code for a training course page
-Let’s create a new folder called _layouts and have a new empty file called tutorial-course.html inside. This is where our HTML template used to render our tutorial will be.
 
-Open tutorial-course.html and add the following:
-
-```
-<!DOCTYPE html>
-<html>
-  <head>
-      <script type="application/ld+json">
-         insert Bioschemas annotation here
-      </script>
-  </head>
-  <body>
-     insert content here
-  </body>
-</html>
-```
 The rather elaborate annotation according to Bioschemas profiles `Course/CourseInstance` looks like this. Note that it is using the annotation for the associated training material, too. This annotation is added via the property `hasPart`.
 
 ```json
@@ -184,11 +236,8 @@ The rather elaborate annotation according to Bioschemas profiles `Course/CourseI
 
 TODO: add explanation of the various properties and reference the extensive documentation of the Bioschemas profile.
 
-## 1.3 Publish training course and material via github
 
-TODO: add content from https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
-
-## 1.4 Validate the annotation
+## 1.3 Validate the annotation
 
 Validate the individual page with the [schema.org validator](https://validator.schema.org/) by pasting the URL into the Fetch URL tab. The validation procedure will indicate if you have used non-existing properties of the Bioschemas profile. If error messages are returned, have a look at the troubleshooting section below.
 
