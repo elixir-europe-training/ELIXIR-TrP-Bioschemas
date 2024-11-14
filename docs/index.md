@@ -38,7 +38,7 @@ Greek Mythology icons made by [max.icons](https://www.flaticon.com/authors/maxic
     
     :fontawesome-solid-lock: **License:** [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)  
     
-    :fontawesome-solid-money-bill-1: **Funding:** This project has received funding from [name of funders].  
+    :fontawesome-solid-money-bill-1: **Funding:** This project has received funding from the ELIXIR Training Programme 2024-2026.  
 
     [comment]: # (Property in Bioschema: description)
     [comment]: # (Property in Bioschema: coursePrequsites)
