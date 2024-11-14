@@ -12,28 +12,29 @@ Greek Mythology icons made by [max.icons](https://www.flaticon.com/authors/maxic
 
 !!! overview ""
     :fontawesome-regular-bookmark: **Description**  
-    Add a short description of the training materail should be inserted here. 
+    This training material provides a comprehensive guide for annotating websites that host training events and materials. It begins with the basics of website annotation, offering  foundational knowledge essential for understanding the process. The course then delves into the specifics of Bioschemas annotation, demonstrating how to apply it to an HTML page to enhance discoverability and interoperability. Following this, the guide explores the integration of Bioschemas with popular static site generators and content management systems, including Jekyll, Mkdocs, and Wordpress. Each section provides practical examples and step-by-step instructions to ensure learners can effectively implement Bioschemas annotations in their own projects. This training is designed to equip participants with the skills needed to improve the visibility and accessibility of their training content on the web.
     
     </br>
     
     :fontawesome-solid-arrow-left: **Prerequisites**  
     To be able to follow this course, learners should have knowledge in:  
-    &emsp;1. First requirement  
-    &emsp;2. Second requirement  
+    &emsp;1. Basic knowledge of github  
+    &emsp;2. Basic knowledge of HTML  
     
     </br>
     
     :fontawesome-solid-arrow-right: **Learning Outcomes:**  
     By the end of the course, learners will be able to:  
-    &emsp;1. First item  
-    &emsp;2. Second item  
+    &emsp;1. Understand and explain the fundamental concepts of website annotation and the importance of Bioschemas in enhancing web content discoverability and interoperability.  
+    &emsp;2. Apply Bioschemas annotations to HTML pages, Jekyll, Mkdocs, and Wordpress sites, following step-by-step instructions to improve the visibility and accessibility of training content.
+    &emsp;3. Evaluate and troubleshoot the implementation of Bioschemas annotations across different platforms, ensuring the accuracy and effectiveness of the annotations in real-world scenarios.
     
     </br>
     
-    :fontawesome-solid-users: **Target Audience:** Researchers, undergraduate students, postgraduate students, etc...  
+    :fontawesome-solid-users: **Target Audience:** Training Content Developer, Trainers  
     </br>
     
-    :fontawesome-solid-stairs: **Level:** Beginner/Intermediate/Advanced  
+    :fontawesome-solid-stairs: **Level:** Intermediate 
     
     :fontawesome-solid-lock: **License:** [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)  
     
@@ -57,16 +58,15 @@ Greek Mythology icons made by [max.icons](https://www.flaticon.com/authors/maxic
 
 Please cite as:
 
-  1. Enter your citation here.
-  2. Geert van Geest, Elin Kronander, Jose Alejandro Romero Herrera, Nadja Žlender, & Alexia Cardona. (2023). The ELIXIR Training Lesson Template - Developing Training Together (v1.0.0-alpha). Zenodo. https://doi.org/10.5281/zenodo.7913092. 
+  1. Alexander Botzki, Bruna Piereck Moura. (2024). The ELIXIR Guide for Bioschemas annotation of sites hosting training material (v1.0.0-alpha). Zenodo. https://doi.org/10.XXXX/zenodo.YYYYYY. 
 
 ---
 ## Setup
 
 ### Data setup
-To run this lesson you need to install data from …
+To run this lesson you need to install data from <TODO: add repo with github template>
 
 ### Software setup
-To run this course you need to install… continue with software installation instructions
+To run this course you need to install VS Code.
 
 
