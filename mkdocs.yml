@@ -1,10 +1,12 @@
-site_name: ELIXIR Training Lesson
+site_name: ELIXIR Guide for Bioschemas Annotation of Training Assets
 nav:
     - About: index.md
     - Course Content:
-      - "1. Bioschemas annotation of HTML page": chapters/chapter_01.md
-      - "2. Bioschemas with Jekyll": chapters/chapter_02.md
-      - "3. Bioschemas with Mkdocs": chapters/chapter_03.md
+      - "1. The annotation of websites - the basics": chapters/chapter_00.md
+      - "2. Bioschemas annotation of an HTML page": chapters/chapter_01.md
+      - "3. Bioschemas with Jekyll": chapters/chapter_02.md
+      - "4. Bioschemas with Mkdocs": chapters/chapter_03.md
+      - "5. Bioschemas with Wordpress": chapters/chapter_04.md
     - "Follow up training": follow_up_training.md
 
 theme:
@@ -20,8 +22,8 @@ theme:
     text: Lato
 
 # Repository
-repo_name: elixir-europe-training/ELIXIR-TrP-LessonTemplate-MkDocs
-repo_url: https://github.com/elixir-europe-training/ELIXIR-TrP-LessonTemplate-MkDocs
+repo_name: elixir-europe-training/ELIXIR-TrP-Bioschema
+repo_url: https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas
 edit_uri: edit/main/docs/
 
 plugins:

@@ -1,5 +1,4 @@
-
-# ELIXIR Lesson Title 
+# The ELIXIR Guide for Annotation of websites hosting training events and material
 
 [add-bioschemas file='./docs/training-material.yaml']
 
