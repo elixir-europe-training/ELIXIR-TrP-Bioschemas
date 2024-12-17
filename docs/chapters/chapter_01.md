@@ -197,9 +197,7 @@ TODO: add content from https://docs.github.com/en/pages/getting-started-with-git
 
 Validate the individual page with the [schema.org validator](https://validator.schema.org/) by pasting the URL into the Fetch URL tab. The validation procedure will indicate if you have used non-existing properties of the Bioschemas profile. If error messages are returned, have a look at the troubleshooting section below.
 
-TODO: Add image from TeSS course
-
-![screenshot of about schema.org validator](./../assets/images/b369eIQ.png)
+![screenshot of about schema.org validator](https://github.com/elixir-europe-training/ELIXIR-TrP-TeSS/blob/main/docs/assets/images/b369eIQ.png)
 
 TODO: add reference to https://www.w3schools.com/
 
