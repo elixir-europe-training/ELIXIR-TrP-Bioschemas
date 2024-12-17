@@ -107,7 +107,7 @@ The JSON-LD object has several property-value pairs.
 
 ## HTML code for a training material page
 
-Open the tu.html in Edit mode. It has a quite simple structure:
+Open the tutorial01.html in Edit mode. It has a quite simple structure:
 
 ```html
 <!DOCTYPE html>
@@ -199,5 +199,8 @@ Validate the individual page with the [schema.org validator](https://validator.s
 
 ![screenshot of about schema.org validator](https://github.com/elixir-europe-training/ELIXIR-TrP-TeSS/blob/main/docs/assets/images/b369eIQ.png)
 
-TODO: add reference to https://www.w3schools.com/
+## 1.5 References
+
+- Small quantities of content from w3school.com have been used in the context of FAIR use.
+- Relevant profiles for training have been used as well as example snippets of the JSON-LD objects from https://bioschemas.org/. 
 
