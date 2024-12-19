@@ -8,7 +8,7 @@ Most webmasters are familiar with HTML tags on their pages. Usually, HTML tags t
 
 In order to increase findability in web browsers [Schema.org](https://schema.org) provides a collection of shared vocabularies webmasters can use to mark up their pages in ways that can be understood by the major search engines: Google, Microsoft and alike.
 
-You can use the [schema.org] (https://schema.org) vocabulary along with the Microdata, RDFa, or JSON-LD formats to add information to your Web content. This guide will help get you up to speed with JSON-LD and Bioschemas so that you can start adding markup to your web pages.
+You can use the [schema.org](https://schema.org) vocabulary along with the Microdata, RDFa, or JSON-LD formats to add information to your Web content. This guide will help get you up to speed with JSON-LD and Bioschemas so that you can start adding markup to your web pages.
 
 Although this guide focuses on Bioschemas and JSON-LD objects. The basic ideas (types, properties etc.) introduced here are relevant beyond JSON-LD and apply for other markup with microdata or RDFa.
 
@@ -33,4 +33,3 @@ Note that the `CourseInstance` profile is used in tandem with the `Course` profi
 A sitemap is a file where you provide information about the pages, videos, and other files on your site, and the relationships between them. Search engines like Google read this file to crawl your site more efficiently. A sitemap helps search engines discover URLs on your site.
 
 The sitemap will be important so scrapers can find your pages and their metadata increasing the findability of the material.
-
