@@ -41,21 +41,55 @@ Let's explore the provided files and annotate them step by step. Open the index.
 </html>
 ```
 
-The Bioschemas annotation about the course will be inserted in the `script` tag as part of the `head` tag. Since we are annotating a course, we use the Bioschemas profiles `Course/CourseInstance`. The rather elaborate annotation according to these Bioschemas profiles is shown below. Note that it is using the annotation for the associated training material, too. This annotation is added via the property `hasPart`. We will have a look at the training material annotation later on.
+All HTML documents must start with a <!DOCTYPE> declaration. The declaration is not an HTML tag. It is an "information" to the browser about what document type to expect.
 
-The JSON-LD object has several property-value pairs.
+This is an example of an HTML file with three HTML elements - `<html>`, `<head>`, and `<body>`. An HTML element is defined by a start tag, some content, and an end tag. For the outer `html` element (`html` is the tagname), the start tag is `<html>` and the end tag is `</html>`. The `/` in front of the tagname indicates an end tag. 
+
+The `<html>` element is the root element of an HTML page. The `<head>` element contains meta information about the HTML page and the `<body>` element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+
+Now, let's focus on the markup of the HTML page. There are several technical options to markup an HTML file, we focus on using a [JSON-LD](https://en.wikipedia.org/wiki/JSON-LD) object in combination with a [Bioschemas](https://bioschemas.org/) annotation.
+
+As you see in the code example above, the markup of the HTML page with the Bioschemas annotation as a JSON-LD object needs to be added to the `<head>` element and be included in a `<script>` element with the [attribute](https://www.w3schools.com/html/html_attributes.asp) `type="application/ld+json"`.
+
+Since we are annotating a course, we use the Bioschemas profiles `Course/CourseInstance`. The rather elaborate annotation according to these Bioschemas profiles is shown below. Note that it is using the annotation for the associated training material, too. This annotation is added via the property `hasPart`. We will have a look at the training material annotation later on. For now, you could copy the JSON-LD object shown below in the HTML file.
+
+The JSON-LD object has several property-value pairs. We have created a table for an easier overview about what properties we need to fill in or annotate for the Course. If you some explanation about the properties, please have a [detailed look](https://bioschemas.org/profiles/Course/1.0-RELEASE) on the Bioschemas page.
+
+| property   | values   |
+| :--------- | :--------- |
+| @contect   | https://schema.org/    |
+| @type   | Course    |
+| description   | ELIXIR Bioschemas Annotation Guide |
+| keywords   | Bioschemas, Schema validation, Harvesting markup, Deploying markup |
+| name   | Bioschemas Annotation Guide for training material |
+| hasPart  | contains a JSON-LD using the TrainingMaterial profile |
+| hasCourseInstance  | contains a JSON-LD using the CourseInstance profile |
+
+We have created another table for an easier overview about what properties we need to fill in or annotate for the CourseInstance. If you some explanation about the properties, please have a [detailed look](https://bioschemas.org/profiles/CourseInstance/1.0-RELEASE) on the Bioschemas website.
+
+| property   | values   |
+| :--------- | :--------- |
+| @context   | https://schema.org/    |
+| @type   | CourseInstance    |
+| courseMode | online |
+| location   | Virtual |
+| startDate | 2022-01-10 |
+| endDate | 2022-01-10 |
+| inLanguage | en-GB |
+| url       | https://www.workshops.org | 
+| instructor | This will be a structured list of Persons  |
 
 ```json
 {
-   "@context":"https://schema.org/",
-   "@type":"Course",
+  "@context":"https://schema.org/",
+  "@type":"Course",
   "http://purl.org/dc/terms/conformsTo":{
     "@type":"CreativeWork",
     "@id":"https://bioschemas.org/profiles/Course/1.0-RELEASE"
   },
-  "description":"Bioschemas Tutorial at SWAT4HCLS Leiden",
-  "keywords":"Bioschemas, SWAT4HCLS, Schema validation, Harvesting markup, Deploying markup",
-  "name":"Bioschemas - Deploying and Harvesting Markup",
+  "description":"ELIXIR Bioschemas Annotation Guide",
+  "keywords":"Bioschemas, Schema validation, Harvesting markup, Deploying markup",
+  "name":"Bioschemas Annotation Guide for training material",
   "hasPart":[
     {"@type":"LearningResource",
     "@id":"https://dx.doi.org/10.4126/FRL01-006432243",
@@ -63,9 +97,9 @@ The JSON-LD object has several property-value pairs.
       "@type":"CreativeWork",
       "@id":"https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
     },
-    "description":"Bioschemas Tutorial at SWAT4HCLS Leiden",
-    "keywords":"Bioschemas, SWAT4HCLS, Schema validation, Harvesting markup, Deploying markup",
-    "name":"Bioschemas - Deploying and Harvesting Markup"
+    "description":"This training material provides a comprehensive guide for annotating websites that host training events and materials. It begins with the basics of website annotation, offering foundational knowledge essential for understanding the process. The course then delves into the specifics of Bioschemas annotation, demonstrating how to apply it to an HTML page to enhance discoverability and interoperability. Following this, the guide explores the integration of Bioschemas with popular static site generators and content management systems, including Jekyll, Mkdocs, and Wordpress. Each section provides practical examples and step-by-step instructions to ensure learners can effectively implement Bioschemas annotations in their own projects. This training is designed to equip participants with the skills needed to improve the visibility and accessibility of their training content on the web.",
+    "keywords":"Bioschemas, Schema validation, Harvesting markup, Deploying markup, Training material",
+    "name":"ELIXIR Guide for Bioschemas Annotation of Training Assets"
     }
   ],
   "hasCourseInstance":[
@@ -73,37 +107,31 @@ The JSON-LD object has several property-value pairs.
       "@type":"CourseInstance",
       "http://purl.org/dc/terms/conformsTo":{
         "@type":"CreativeWork",
-        "@id":"https://bioschemas.org/profiles/CourseInstance/0.8-DRAFT-2020_10_06"
+        "@id":"https://bioschemas.org/profiles/CourseInstance/1.0-RELEASE"
       },
       "courseMode":"online",
-      "location":"Virtual, and Fletcher Wellness-Hotel, Leiden, The Netherlands",
+      "location":"Virtual",
       "startDate":"2022-01-10",
       "endDate":"2022-01-10",
       "inLanguage":"en",
-      "url":"https://www.swat4ls.org/workshops/leiden2022/",
+      "url":"https://www.workshops.org",
       "instructor":[
         {
           "@type":"Person",
-          "name":"Alban Gaignard",
-          "@id":"https://bioschemas.org/people/AlbanGaignard",
-          "url":"https://bioschemas.org/people/AlbanGaignard"
+          "name":"Alexander Botzki",
+          "@id":"https://orcid.org/0000-0001-6691-4233",
+          "url":"https://orcid.org/0000-0001-6691-4233"
         },{
           "@type":"Person",
-          "name":"Leyla Jael Castro",
-          "@id":"https://bioschemas.org/people/LeylaGarcia",
-          "url":"https://bioschemas.org/people/LeylaGarcia"
-        },{
-          "@type":"Person",
-          "name":"Alasdair Gray",
-          "@id":"https://bioschemas.org/people/AlasdairGray",
-          "url":"https://bioschemas.org/people/AlasdairGray"
+          "name":"Bruna Piereck",
+          "@id":"https://orcid.org/0000-0001-5958-0669",
+          "url":"https://orcid.org/0000-0001-5958-0669"
         }
       ]
     }
   ]
 }
 ```
-
 
 ## HTML code for a training material page
 
@@ -123,15 +151,20 @@ Open the tutorial01.html in Edit mode. It has a quite simple structure:
 </html>
 ```
 
-All HTML documents must start with a <!DOCTYPE> declaration. The declaration is not an HTML tag. It is an "information" to the browser about what document type to expect.
+Since we are annotating a course, we use the Bioschemas profiles `Course/CourseInstance`. The JSON-LD object has several property-value pairs. We have created a table for an easier overview about several important properties we need to fill in or annotate for the Course. If you some explanation about the properties, please have a [detailed look](https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE) on the Bioschemas page.
 
-This is an example of an HTML file with three HTML elements - `<html>`, `<head>`, and `<body>`. An HTML element is defined by a start tag, some content, and an end tag. For the outer `html` element (`html` is the tagname), the start tag is `<html>` and the end tag is `</html>`. The `/` in front of the tagname indicates an end tag. 
+| property   | values   |
+| :--------- | :--------- |
+| @contect   | https://schema.org/    |
+| @type   | Course    |
+| description   | This guide will show you how to do add Schema.org markup to a GitHub Pages site. |
+| keywords   | Bioschemas, schema.org, JSON-LD, GitHub pages |
+| name   | Adding Schema.org/Bioschemas annotation to a GitHub Pages site |
+| educationalLevel  | beginner |
+| inLanguage  | en-GB |
+| license  |  CC-BY 4.0   |
 
-The `<html>` element is the root element of an HTML page. The `<head>` element contains meta information about the HTML page and the `<body>` element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
 
-Now, let's focus on the markup of the HTML page. There are several technical options to markup an HTML file, we focus on using a [JSON-LD](https://en.wikipedia.org/wiki/JSON-LD) object in combination with a [Bioschemas](https://bioschemas.org/) annotation.
-
-As you see in the code example above, the markup of the HTML page with the Bioschemas annotation as a JSON-LD object needs to be added to the `<head>` element and be included in a `<script>` element with the [attribute](https://www.w3schools.com/html/html_attributes.asp) `type="application/ld+json"`.
 
 The rather elaborate annotation according to Bioschemas profile `TrainingMaterial` looks like this:
 
@@ -151,7 +184,7 @@ The rather elaborate annotation according to Bioschemas profile `TrainingMateria
     }
   ],
   "description":"This guide will show you how to do add Schema.org markup to a GitHub Pages site.",
-  "keywords":"schema.org, TeSS, GitHub pages",
+  "keywords":"schema.org, Bioschemas, JSON-LD, GitHub pages",
   "name":"Adding Schema.org to a GitHub Pages site",
   "about":[{"@id":"https://schema.org"},{"@id":"http://edamontology.org/topic_0089"}],
   "author":[
@@ -180,7 +213,7 @@ The rather elaborate annotation according to Bioschemas profile `TrainingMateria
   ],
   "dateModified":"2021-07-22",
   "license":"CC-BY 4.0",
-    "version":2.0
+  "version":2.0
   }
 ```
 This examples uses most of the properties specified in the Bioschemas profile [TrainingMaterial](https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE). It is quite tedious to create the JSON-LD objects manually, so we would recommend to start from the above example as a template.
