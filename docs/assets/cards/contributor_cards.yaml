@@ -1,35 +1,5 @@
-- title: Artemis
+- title: Phil Reed
   content: |
-    [:custom-orcid:](https://orcid.org/) [:simple-github:](https://github.com/) [:simple-linkedin:](https://linkedin.com/)<br>
-    Lorem ipsum dolor sit amet.
+    [:custom-orcid:](https://orcid.org/0000-0002-4479-715X) [:simple-github:](https://github.com/PhilReedData) [:simple-linkedin:](https://www.linkedin.com/in/phil-reed-888b533b/)<br>
+    Research Community and Training Manager, Information Management, The University of Manchester.
   image: ./assets/images/cards/021-artemis.png
-
-- title: Ares
-  content: |
-    [:custom-orcid:](https://orcid.org/) [:simple-github:](https://github.com/) [:simple-linkedin:](https://linkedin.com/)<br>
-    Lorem ipsum dolor sit amet.
-  image: ./assets/images/cards/006-ares.png
-
-- title: Nike
-  content: |
-    [:custom-orcid:](https://orcid.org/) [:simple-github:](https://github.com/) [:simple-linkedin:](https://linkedin.com/)<br>
-    Lorem ipsum dolor sit amet.
-  image: ./assets/images/cards/027-nike.png
-
-- title: Prometheus
-  content: |
-    [:custom-orcid:](https://orcid.org/) [:simple-github:](https://github.com/) [:simple-linkedin:](https://linkedin.com/)<br>
-    Lorem ipsum dolor sit amet.
-  image: ./assets/images/cards/019-prometheus.png
-
-- title: Perseus
-  content: |
-    [:custom-orcid:](https://orcid.org/) [:simple-github:](https://github.com/) [:simple-linkedin:](https://linkedin.com/)<br>
-    Lorem ipsum dolor sit amet.
-  image: ./assets/images/cards/025-perseus.png
-
-- title: Hercules
-  content: |
-    [:custom-orcid:](https://orcid.org/) [:simple-github:](https://github.com/) [:simple-linkedin:](https://linkedin.com/)<br>
-    Lorem ipsum dolor sit amet.
-  image: ./assets/images/cards/042-hercules.png 
