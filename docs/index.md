@@ -18,15 +18,15 @@ Greek Mythology icons made by [max.icons](https://www.flaticon.com/authors/maxic
     
     :fontawesome-solid-arrow-left: **Prerequisites**  
     To be able to follow this course, learners should have knowledge in:  
-    &emsp;1. Basic knowledge of github  
-    &emsp;2. Basic knowledge of HTML  
+    &emsp;1. Basic knowledge of GitHub - git `add`, `commit`, `push`, `clone`, and branches  
+    &emsp;2. Basic knowledge of HTML - fundamental HTML examples using `head`, `body`, `footer` etc. 
     
     </br>
     
     :fontawesome-solid-arrow-right: **Learning Outcomes:**  
     By the end of the course, learners will be able to:  
     &emsp;1. Understand and explain the fundamental concepts of website annotation and the importance of Bioschemas in enhancing web content discoverability and interoperability.  
-    &emsp;2. Apply Bioschemas annotations to HTML pages, Jekyll, Mkdocs, and Wordpress sites, following step-by-step instructions to improve the visibility and accessibility of training content.
+    &emsp;2. Apply Bioschemas annotations to HTML pages, Jekyll, Mkdocs, and Wordpress sites, following step-by-step instructions to improve the visibility and accessibility of training content.  
     &emsp;3. Evaluate and troubleshoot the implementation of Bioschemas annotations across different platforms, ensuring the accuracy and effectiveness of the annotations in real-world scenarios.
     
     </br>
@@ -64,9 +64,9 @@ Please cite as:
 ## Setup
 
 ### Data setup
-To run this lesson you need to install data from <TODO: add repo with github template>
+To run this lesson you need to install data from this [GitHub template](https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas-HTML-Template).
 
 ### Software setup
-To run this course you need to install VS Code.
+To run this course, you'd need to use a text editor like Sublime, Emacs, VS Code or alike.
 
 
