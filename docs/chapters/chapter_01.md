@@ -165,7 +165,6 @@ Since we are annotating a course, we use the Bioschemas profiles `Course/CourseI
 | license  |  CC-BY 4.0   |
 
 
-
 The rather elaborate annotation according to Bioschemas profile `TrainingMaterial` looks like this:
 
 ```json
@@ -218,21 +217,25 @@ The rather elaborate annotation according to Bioschemas profile `TrainingMateria
 ```
 This examples uses most of the properties specified in the Bioschemas profile [TrainingMaterial](https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE). It is quite tedious to create the JSON-LD objects manually, so we would recommend to start from the above example as a template.
 
-TODO: demonstrate tools to edit JSON-LD object template
-
 In the example code, replace `insert bioschemas annotation here` by the JSON-LD object and save the HTML file.
 
-## 1.3 Publish training course and material via github
+Thanks to the [Biohackathon 2024 project 10](https://github.com/elixir-europe/biohackathon-projects-2024/blob/main/10.md), we have been made aware of the [Data Discovery Engine](https://discovery.biothings.io/markup-generator) website where you can create JSON-LD objects following the definitions of various Bioschemas profiles. [Here](https://discovery.biothings.io/markup-generator?schema_class=bioschemas:TrainingMaterial) is the direct link to generate a Bioschemas-compliant JSON-LD object for the profile TrainingMaterial.
 
-TODO: add content from https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+If you use this approach, it is quite simple to create a valid JSON-LD object which you could copy paste into the HTML page tutorial01.html.
 
-## 1.4 Validate the annotation
+Yet another alternative could be using [TeSS](https://tess.elixir-europe.org/) and registering the training material manually in the [sandbox version](https://dev.tess.elixir-europe.org/) of TeSS. By following [this tutorial](https://elixir-europe-training.github.io/ELIXIR-TrP-TeSS/chapters/chapter_02/#scenario-5-manual-registration-of-training-material-in-tess), you could add training material to the sandbox of TeSS and use the validation step shown below to get access to the JSON-LD object.
+ 
+## Publish training course and material via GitHub
+
+Please refer to the [steps](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) described in the documentation of GitHub.
+
+## Validate the markup of the page with the Schema.org validator
 
 Validate the individual page with the [schema.org validator](https://validator.schema.org/) by pasting the URL into the Fetch URL tab. The validation procedure will indicate if you have used non-existing properties of the Bioschemas profile. If error messages are returned, have a look at the troubleshooting section below.
 
-![screenshot of about schema.org validator](https://github.com/elixir-europe-training/ELIXIR-TrP-TeSS/blob/main/docs/assets/images/b369eIQ.png)
+![screenshot of about schema.org validator](https://raw.githubusercontent.com/elixir-europe-training/ELIXIR-TrP-TeSS/refs/heads/main/docs/assets/images/b369eIQ.png)
 
-## 1.5 References
+## References
 
 - Small quantities of content from w3school.com have been used in the context of FAIR use.
 - Relevant profiles for training have been used as well as example snippets of the JSON-LD objects from https://bioschemas.org/. 
