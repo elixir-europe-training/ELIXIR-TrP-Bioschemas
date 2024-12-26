@@ -4,8 +4,8 @@ nav:
     - Course Content:
       - "1. The annotation of websites - the basics": chapters/chapter_00.md
       - "2. Bioschemas annotation of an HTML page": chapters/chapter_01.md
-      - "3. Bioschemas with Jekyll": chapters/chapter_02.md
-      - "4. Bioschemas with Mkdocs": chapters/chapter_03.md
+      - "3. Bioschemas with Mkdocs": chapters/chapter_03.md
+      - "4. Bioschemas with Jekyll": chapters/chapter_02.md
       - "5. Bioschemas with Wordpress": chapters/chapter_04.md
       - "6. Sitemap, what is it and how to create": chapters/chapter_05.md
     - "Follow up training": follow_up_training.md
