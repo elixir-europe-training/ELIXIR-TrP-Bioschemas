@@ -219,9 +219,15 @@ This examples uses most of the properties specified in the Bioschemas profile [T
 
 In the example code, replace `insert bioschemas annotation here` by the JSON-LD object and save the HTML file.
 
-## Publish training course and material via github
+Thanks to the [Biohackathon 2024 project 10](https://github.com/elixir-europe/biohackathon-projects-2024/blob/main/10.md), we have been made aware of the [Data Discovery Engine](https://discovery.biothings.io/markup-generator) website where you can create JSON-LD objects following the definitions of various Bioschemas profiles. [Here](https://discovery.biothings.io/markup-generator?schema_class=bioschemas:TrainingMaterial) is the direct link to generate a Bioschemas-compliant JSON-LD object for the profile TrainingMaterial.
 
-TODO: add content from https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+If you use this approach, it is quite simple to create a valid JSON-LD object which you could copy paste into the HTML page tutorial01.html.
+
+Yet another alternative could be using [TeSS](https://tess.elixir-europe.org/) and registering the training material manually in the [sandbox version](https://dev.tess.elixir-europe.org/) of TeSS. By following [this tutorial](https://elixir-europe-training.github.io/ELIXIR-TrP-TeSS/chapters/chapter_02/#scenario-5-manual-registration-of-training-material-in-tess), you could add training material to the sandbox of TeSS and use the validation step shown below to get access to the JSON-LD object.
+ 
+## Publish training course and material via GitHub
+
+Please refer to the [steps](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) described in the documentation of GitHub.
 
 ## Validate the markup of the page with the Schema.org validator
 
