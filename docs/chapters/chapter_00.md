@@ -24,14 +24,12 @@ Note that the `CourseInstance` profile is used in tandem with the `Course` profi
 
 # Use cases described in this guide
 
-
+In this guide, we will describe three different scenarios: the first one being a simple situation with static HTML pages in a GitHub repository containing the course description and the tutorial -- secondly, hosting training material content using static site generators like mkdocs or Jekyll and lastly, providing the training content via a Content Management System like WordPress.
 
 ![bioschema use cases](../assets/images/Bioschemas_usecases.png)
 
-# Sitemap
+# Why do we use a sitemap to indicate where our training content is on the website?
 
 ![sitemap drawing](../assets/images/sitemap_drawing.png){align=left}
 
-A sitemap is a file where you provide information about the pages, videos, and other files on your site, and the relationships between them. Search engines like Google read this file to crawl your site more efficiently. A sitemap helps search engines discover URLs on your site.
-
-The sitemap will be important so scrapers can find your pages and their metadata increasing the findability of the material.
+A sitemap is a file where you provide information about the pages, videos, and other files on your site, and the relationships between them. Search engines like Google read this file to crawl your site more efficiently. A sitemap helps search engines discover URLs on your site. The sitemap will be important so that scrapers like the Bioschemas scraper developed by the TeSS team can find your pages and their structured metadata increasing the findability of the training material.
