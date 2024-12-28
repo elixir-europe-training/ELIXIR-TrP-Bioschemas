@@ -1,3 +1,7 @@
+## Introduction
+
+If you use WordPress as the content management system, there a many possibilities how the content of the course announcement as well as the content of the tutorial aka the training material is provided. This is why we only describe a plugin with which you can markup your WordPress pages. It is a commercial plugin from RankMath.
+
 ## Bioschemas profiles for training resources
 
 [add-bioschemas file='docs/training-material.yaml']
@@ -10,7 +14,9 @@ Many training related resources will include pages describing tutorials or cours
 
 Note that the `CourseInstance` profile is used in tandem with the `Course` profile, i.e., a `CourseInstance` does not exist without a `Course` but a `Course` can exist without a `CourseInstance` (there are no current offerings of the course).
 
-## Setup of the Wordpress CMS
+## Setup of the WordPress CMS
+
+We do not describe the way to setup a WordPress sandbox system since it is beyond the scope of this tutorial.
 
 ### Configuration of the Bioschemas Profile as Schema template
 
@@ -112,10 +118,8 @@ Template:
 2. In the `General` section, the URL to the sitemap is displayed: `Your sitemap index can be found here: https://your.url.org/sitemap_index.xml`
 3. Manually check all the sections on the left side of the displayed website from `HTML Sitemap` over all `Post Types` and `Taxonomies`. Unselect the slider for all non-relevant Post types and Taxonomies.
 4. Verify the URL whether all relevant links to the pages are shown.
-5. 
 
-## HTML code for a training material page
-
+## Code for a training material page
 
 ```json
 {
@@ -167,11 +171,9 @@ Template:
 ```
 This examples uses most of the properties specified in the Bioschemas profile [TrainingMaterial](https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE). It is quite tedious to create the JSON-LD objects manually, so we would recommend to start from the above example as a template.
 
-TODO: demonstrate tools to edit JSON-LD object template
-
 In the example code, replace `insert bioschemas annotation here` by the JSON-LD object and save the HTML file.
 
-## 1.2 HTML code for a training course page
+## HTML code for a training course page
 
 The rather elaborate annotation according to Bioschemas profiles `Course/CourseInstance` looks like this. Note that it is using the annotation for the associated training material, too. This annotation is added via the property `hasPart`.
 
@@ -236,13 +238,10 @@ The rather elaborate annotation according to Bioschemas profiles `Course/CourseI
 
 TODO: add explanation of the various properties and reference the extensive documentation of the Bioschemas profile.
 
-
-## 1.3 Validate the annotation
+## Validate the markup of the page with the Schema.org validator
 
 Validate the individual page with the [schema.org validator](https://validator.schema.org/) by pasting the URL into the Fetch URL tab. The validation procedure will indicate if you have used non-existing properties of the Bioschemas profile. If error messages are returned, have a look at the troubleshooting section below.
 
-TODO: Add image from TeSS course
-
-![screenshot of about schema.org validator](./../assets/images/b369eIQ.png)
+![screenshot of about schema.org validator](https://raw.githubusercontent.com/elixir-europe-training/ELIXIR-TrP-TeSS/refs/heads/main/docs/assets/images/b369eIQ.png)
 
 
