@@ -1,3 +1,8 @@
+## Introduction
+
+In this example, we use the ELIXIR Lesson template since it uses mkdocs as static site generator and comes with a Python library [addbioschemas](https://pypi.org/project/addbioschemas/) which makes adding Bioschemas markup quite easy.
+For the ELIXIR Lesson template, an extensive tutorial has been [published](https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplateInstructions-MkDocs/) which describes Bioschemas markup using addbioschemas.
+
 ## Bioschemas profiles for training resources
 
 Many training related resources will include pages describing tutorials or courses. As such, they are marked up using the following three profiles:
@@ -10,152 +15,51 @@ Note that the `CourseInstance` profile is used in tandem with the `Course` profi
 
 ## Setup of the repository
 
-TODO: add folder structure by clone from template
+Let's start with the first step and create a new repository from the [Bioschemas tutorial template for mkdocs](https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas-MkDocs-Template). Once you have opened the link in your browser, you can create a new github repository by clicking on the green 'Use template' button.
+Enter a new name for the created repository e.g. ELIXIR-TrP-Bioschemas-mkdocs under your own GitHub account.
 
-1. Use template...
+## Markup for a training course page using mkdocs as static site generator
 
-## Code for a training material page using mkdocs as static site generator
+We reuse the technical [instruction](https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplateInstructions-MkDocs/chapters/chapter_02/#adding-bioschemas-markup) given in the ELIXIR Lesson template tutorial to add markup using the libray addbioschemas. But instead of using an annotation according to Bioschemas profile `LearningResource` we start with the profiles `Course/CourseInstance`.
 
-Let’s create a new folder called _layouts and have a new empty file called tutorial.html inside. This is where our HTML template used to render our tutorial will be.
+Open the file `_data/metadata.yml` and add the following:
 
-Open tutorial.html and add the following text:
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-      <script type="application/ld+json">
-         {{ page.bioschemas | jsonify }} 
-      </script>
-  </head>
-  <body>
-     {{ content }}
-  </body>
-</html>
-```
-This is an example of an HTML file with three HTML elements - `<html>`, `<head>`, and `<body>`. An HTML element is defined by a start tag, some content, and an end tag. For the outer `html` element (`html` is the tagname), the start tag is `<html>` and the end tag is `</html>`. The `/` in front of the tagname indicates an end tag.
-
-The `<html>` element is the root element of an HTML page. The `<head>` element contains meta information about the HTML page and the `<body>` element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
-
-TODO: add reference to https://www.w3schools.com/
-
-The markup of the HTML page with the Bioschemas annotation as a JSON-LD object needs to be added to the `<head>` element and be included in a `<script>` element with the attribute `type="application/ld+json"`.
-
-TODO: add markdown file
-
-When using a static site generator like Jeykll, we try to use placeholder (variables) which will be filled in once the static HTML pages are created. In order to facilitate the process, we use a `YAML` header using a `Bioschemas` attribute containing the following properties.
-
-```
-bioschemas:
-  "@context": https://schema.org/
-  "@type": LearningResource
-  "http://purl.org/dc/terms/conformsTo":
-  - "@type": CreativeWork
-    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
-  about:
-    - "@id": https://schema.org
-    - "@id": http://edamontology.org/topic_0089
-  audience:
-  - "@type": Audience
-    name: (Markup provider, Markup consumer) WebMaster, people deploying GitHub pages
-  name: "Adding Schema.org to a GitHub Pages site"
-  author:
-  - "@type": Person
-    name: "Niall Beard"
-    "@id": https://orcid.org/0000-0002-2627-0231
-    url: https://bioschemas.org/people/NiallBeard
-  contributor:
-  - "@type": Person
-    name: "Alasdair Gray"
-    "@id": https://bioschemas.org/people/AlasdairGray
-    url: https://bioschemas.org/people/AlasdairGray
-  teaches:
-  - "The student will be able to recall shell commands"
-  - "The student will be able to write code to copy files"
-  - "The student will be able to discover new commands on their own"
-  dateModified: 2021-07-22
-  description: "This guide will show you how to do add Schema.org markup to a GitHub Pages site."
-  keywords: "schemaorg, TeSS, GitHub pages"
-  license: CC-BY 4.0
-  version: 2.0
-```
-This `YAML` header is processed by Jekyll to embed the following JSON-LD within the web page. The rather elaborate annotation according to Bioschemas profile `TrainingMaterial` looks like this:
-
-```json
-{
-  "@context":"https://schema.org/",
-  "@type":"LearningResource",
-  "@id": "https://example.com/training-material/12345",
-  "dct:conformsTo":{
-    "@type":"CreativeWork",
-    "@id":"https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
-  },
-  "audience":[
-    {
-      "@type":"Audience",
-      "name":"(Markup provider, Markup consumer) WebMaster, people deploying GitHub pages"
-    }
-  ],
-  "description":"This guide will show you how to do add Schema.org markup to a GitHub Pages site.",
-  "keywords":"schema.org, TeSS, GitHub pages",
-  "name":"Adding Schema.org to a GitHub Pages site",
-  "about":[{"@id":"https://schema.org"},{"@id":"http://edamontology.org/topic_0089"}],
-  "author":[
-    {
-      "@type":"Person",
-      "name":"Niall Beard",
-      "@id":"https://orcid.org/0000-0002-2627-0231",
-      "url":"https://bioschemas.org/people/NiallBeard"
-    }
-  ],
-  "educationalLevel":"beginner",
-  "identifier": "http://dx.doi.org/12349302",
-  "inLanguage": "en-UK",
-  "contributor":[
-    {
-      "@type":"Person",
-      "name":"Alasdair Gray",
-      "@id":"https://bioschemas.org/people/AlasdairGray",
-      "url":"https://bioschemas.org/people/AlasdairGray"
-    }
-  ],
-  "teaches": [
+```yaml
+"@context": https://schema.org/
+"@type": Course
+"@id": https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplate-MkDocs/
+http://purl.org/dc/terms/conformsTo:
+  "@type": CreativeWork
+  "@id": https://bioschemas.org/profiles/Course/1.0-RELEASE
+description: ELIXIR Bioschemas Annotation Guide
+keywords: Bioschemas, Schema validation, Harvesting markup, Deploying markup
+name: Bioschemas Annotation Guide for training material
+# lookup at https://spdx.org/licenses/
+license: CC-BY-4.0
+educationalLevel: beginner
+teaches: [
   "The student will be able to recall shell commands", 
   "The student will be able to write code to copy files", 
   "The student will be able to discover new commands on their own"
-  ],
-  "dateModified":"2021-07-22",
-  "license":"CC-BY 4.0",
-    "version":2.0
-  }
+  ]
+hasCourseInstance:
+- "@type": CourseInstance
+  courseMode: online
+  location: Virtual
+  startDate: 2022-01-10
+  endDate: 2022-01-10
+  inLanguage: en-GB
+  url: https://www.workshops.org
+  http://purl.org/dc/terms/conformsTo:
+  - "@type": CreativeWork
+    "@id": https://bioschemas.org/profiles/CourseInstance/1.0-RELEASE  
+  instructor:
+  - "@type": Person
+    name: Elin Kronander
+    identifier: https://orcid.org/0000-0003-0280-6318
 ```
 
-This examples uses most of the properties specified in the Bioschemas profile [TrainingMaterial](https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE). 
-
-Once you have inserted the markup (= `YAML` header), save the markdown file file.
-
-Please 
-
-## 1.2 HTML code for a training course page
-Let’s create a new folder called _layouts and have a new empty file called tutorial-course.html inside. This is where our HTML template used to render our tutorial will be.
-
-Open tutorial-course.html and add the following:
-
-```
-<!DOCTYPE html>
-<html>
-  <head>
-      <script type="application/ld+json">
-         insert Bioschemas annotation here
-      </script>
-  </head>
-  <body>
-     insert content here
-  </body>
-</html>
-```
-
-The rather elaborate annotation according to Bioschemas profiles `Course/CourseInstance` looks like this. Note that it is using the annotation for the associated training material, too. This annotation is added via the property `hasPart`.
+The rather elaborate annotation according to Bioschemas profiles `Course/CourseInstance` which will be created by the bioschemas library looks like this.
 
 ```json
 {
@@ -168,18 +72,6 @@ The rather elaborate annotation according to Bioschemas profiles `Course/CourseI
   "description":"Bioschemas Tutorial at SWAT4HCLS Leiden",
   "keywords":"Bioschemas, SWAT4HCLS, Schema validation, Harvesting markup, Deploying markup",
   "name":"Bioschemas - Deploying and Harvesting Markup",
-  "hasPart":[
-    {"@type":"LearningResource",
-    "@id":"https://dx.doi.org/10.4126/FRL01-006432243",
-    "http://purl.org/dc/terms/conformsTo":{
-      "@type":"CreativeWork",
-      "@id":"https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
-    },
-    "description":"Bioschemas Tutorial at SWAT4HCLS Leiden",
-    "keywords":"Bioschemas, SWAT4HCLS, Schema validation, Harvesting markup, Deploying markup",
-    "name":"Bioschemas - Deploying and Harvesting Markup"
-    }
-  ],
   "hasCourseInstance":[
     {
       "@type":"CourseInstance",
@@ -216,16 +108,102 @@ The rather elaborate annotation according to Bioschemas profiles `Course/CourseI
 }
 ```
 
-TODO: add explanation of the various properties and reference the extensive documentation of the Bioschemas profile.
+## Markup for a training material page using mkdocs as static site generator
 
-## 1.3 Publish training course and material via github
+We reuse the technical [instruction](https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplateInstructions-MkDocs/chapters/chapter_02/#adding-bioschemas-markup) given in the ELIXIR Lesson template tutorial to add markup using the libray addbioschemas. 
+In this example, we use an annotation according to Bioschemas profile `LearningResource`.
 
-TODO: add content from https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+We will use a [yaml](https://en.wikipedia.org/wiki/YAML) file to specify the markup using the Bioschemas profile. In order to have the tutorial marked up with the Bioschemas annotation, it is important to add a specific instruction to the markdown file which contains the [initial version of the tutorial file](docs/chapters/chapter_01.md).
 
-## 1.4 Validate the annotation
+In combination with mkdocs-material, this specific instruction should be placed after markdown text, so never at the very top of the page.
+
+```markdown
+## 1.1 First subtopic
+
+[add-bioschemas file='_data/training-material.yml']
+
+Here you can enter text and create inline citations[@Garcia2020] by using the bibtex plugin. Add your references in `references.bib`, and cite [@hoebelheinrich_nancy_j_2022_6769695] by adding the @refid inside brackets like this `[@10.1093/bioinformatics/btt113]`
+...
+```
+
+Create a file `_data/training-material.yml` and add the following yaml:
+
+```yaml
+"@context": https://schema.org/
+"@type": LearningResource
+"@id": https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplate-MkDocs/
+http://purl.org/dc/terms/conformsTo:
+  "@type": CreativeWork
+  "@id": https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE
+description: ELIXIR Bioschemas Annotation Guide
+keywords: Bioschemas, Schema validation, Harvesting markup, Deploying markup
+name: Bioschemas Annotation Guide for training material
+# lookup at https://spdx.org/licenses/
+license: CC-BY-4.0
+inLanguage: en-GB
+educationalLevel: beginner
+teaches: [
+  "The student will be able to list the main Bioschemas profiles", 
+  "The student will be able to write Bioschemas markup" 
+  ]
+version: 2.0
+author:
+  - "@type": Person
+    name: Niall Beard
+    identifier: https://orcid.org/0000-0002-2627-0231
+    url: https://orcid.org/0000-0002-2627-0231
+```
+
+This `YAML` file is processed by the bioschemas library to embed the following JSON-LD within the created tutorial web page. The rather elaborate annotation according to Bioschemas profile `TrainingMaterial` looks like this:
+
+```json
+{
+  "@context":"https://schema.org/",
+  "@type":"LearningResource",
+  "@id": "https://example.com/training-material/12345",
+  "dct:conformsTo":{
+    "@type":"CreativeWork",
+    "@id":"https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+  },
+  "description":"This guide will show you how to do add Schema.org markup to a GitHub Pages site.",
+  "keywords":"schema.org, TeSS, GitHub pages",
+  "name":"Adding Schema.org to a GitHub Pages site",
+  "about":[{"@id":"https://schema.org"},{"@id":"http://edamontology.org/topic_0089"}],
+  "author":[
+    {
+      "@type":"Person",
+      "name":"Niall Beard",
+      "@id":"https://orcid.org/0000-0002-2627-0231",
+      "url":"https://bioschemas.org/people/NiallBeard"
+    }
+  ],
+  "educationalLevel":"beginner",
+  "identifier": "http://dx.doi.org/12349302",
+  "inLanguage": "en-UK",
+  "teaches": [
+  "The student will be able to list the main Bioschemas profiles", 
+  "The student will be able to write Bioschemas markup"
+  ],
+  "dateModified":"2021-07-22",
+  "license":"CC-BY 4.0",
+  "version":2.0
+  }
+```
+
+This examples uses most of the properties specified in the Bioschemas profile [TrainingMaterial](https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE). 
+
+Once you have inserted the special instruction, save the markdown file file.
+
+## Publish training course and material via GitHub
+
+Start the publishing process by following these [instructions](https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplateInstructions-MkDocs/chapters/chapter_01/).
+
+TODO: add specific instructions for this forked template.
+
+## Validate the markup of the page with the Schema.org validator
 
 Validate the individual page with the [schema.org validator](https://validator.schema.org/) by pasting the URL into the Fetch URL tab. The validation procedure will indicate if you have used non-existing properties of the Bioschemas profile. If error messages are returned, have a look at the troubleshooting section below.
 
-TODO: Add image from TeSS course
+In this scenario, you can validate the course web site (TODO: add link) and individual tutorial web site (TODO: add link). 
 
-![screenshot of about schema.org validator](./../assets/images/b369eIQ.png)
+![screenshot of about schema.org validator](https://raw.githubusercontent.com/elixir-europe-training/ELIXIR-TrP-TeSS/refs/heads/main/docs/assets/images/b369eIQ.png)
