@@ -1,3 +1,10 @@
+## Introduction
+
+[add-bioschemas file='docs/training-material.yaml']
+
+In this scenario, we use a static site generator called Jekyll to transform your plain text into static websites. What are the main component we need to make this basic example work? We need at least one markdown page for the course (overview) which we call index.html, another HTML page tutorial01.html which contains the training material, the rendering mechanism of Jekyll to create and serve the HTML pages on GitHub as web site and ideally a sitemap.xml document to allow easy integration into TeSS.
+We have prepared a github repo with files index.html, tutorial01.html, sitemap.xml as well as the other files for Jekyll. The rendering mechanism will be provided by GitHub itself and will be explained later.
+
 ## Bioschemas profiles for training resources
 
 Many training related resources will include pages describing tutorials or courses. As such, they are marked up using the following three profiles:
@@ -10,9 +17,8 @@ Note that the `CourseInstance` profile is used in tandem with the `Course` profi
 
 ## Setup of the repository
 
-TODO: add folder structure by clone from template
-
-1. Use template...
+Let's start with the first step and create a new repository from the [basic Bioschemas tutorial template](https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas-Jekyll-Template). Once you have opened the link in your browser, you can create a new GitHub repository by clicking on the green 'Use template' button.
+Enter a new name for the created repository e.g. ELIXIR-TrP-Bioschemas-Jekyll under your own GitHub account.
 
 ## Code for a training material page using Jekyll as static site generator
 
@@ -138,7 +144,7 @@ Once you have inserted the markup (= `YAML` header), save the markdown file file
 
 Please 
 
-## 1.2 HTML code for a training course page
+## HTML code for a training course page
 Let’s create a new folder called _layouts and have a new empty file called tutorial-course.html inside. This is where our HTML template used to render our tutorial will be.
 
 Open tutorial-course.html and add the following:
@@ -161,15 +167,15 @@ The rather elaborate annotation according to Bioschemas profiles `Course/CourseI
 
 ```json
 {
-   "@context":"https://schema.org/",
-   "@type":"Course",
+  "@context":"https://schema.org/",
+  "@type":"Course",
   "http://purl.org/dc/terms/conformsTo":{
     "@type":"CreativeWork",
     "@id":"https://bioschemas.org/profiles/Course/1.0-RELEASE"
   },
-  "description":"Bioschemas Tutorial at SWAT4HCLS Leiden",
-  "keywords":"Bioschemas, SWAT4HCLS, Schema validation, Harvesting markup, Deploying markup",
-  "name":"Bioschemas - Deploying and Harvesting Markup",
+  "description":"ELIXIR Bioschemas Annotation Guide",
+  "keywords":"Bioschemas, Schema validation, Harvesting markup, Deploying markup",
+  "name":"Bioschemas Annotation Guide for training material",
   "hasPart":[
     {"@type":"LearningResource",
     "@id":"https://dx.doi.org/10.4126/FRL01-006432243",
@@ -177,9 +183,9 @@ The rather elaborate annotation according to Bioschemas profiles `Course/CourseI
       "@type":"CreativeWork",
       "@id":"https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
     },
-    "description":"Bioschemas Tutorial at SWAT4HCLS Leiden",
-    "keywords":"Bioschemas, SWAT4HCLS, Schema validation, Harvesting markup, Deploying markup",
-    "name":"Bioschemas - Deploying and Harvesting Markup"
+    "description":"This training material provides a comprehensive guide for annotating websites that host training events and materials. It begins with the basics of website annotation, offering foundational knowledge essential for understanding the process. The course then delves into the specifics of Bioschemas annotation, demonstrating how to apply it to an HTML page to enhance discoverability and interoperability. Following this, the guide explores the integration of Bioschemas with popular static site generators and content management systems, including Jekyll, Mkdocs, and Wordpress. Each section provides practical examples and step-by-step instructions to ensure learners can effectively implement Bioschemas annotations in their own projects. This training is designed to equip participants with the skills needed to improve the visibility and accessibility of their training content on the web.",
+    "keywords":"Bioschemas, Schema validation, Harvesting markup, Deploying markup, Training material",
+    "name":"ELIXIR Guide for Bioschemas Annotation of Training Assets"
     }
   ],
   "hasCourseInstance":[
@@ -187,30 +193,25 @@ The rather elaborate annotation according to Bioschemas profiles `Course/CourseI
       "@type":"CourseInstance",
       "http://purl.org/dc/terms/conformsTo":{
         "@type":"CreativeWork",
-        "@id":"https://bioschemas.org/profiles/CourseInstance/0.8-DRAFT-2020_10_06"
+        "@id":"https://bioschemas.org/profiles/CourseInstance/1.0-RELEASE"
       },
       "courseMode":"online",
-      "location":"Virtual, and Fletcher Wellness-Hotel, Leiden, The Netherlands",
+      "location":"Virtual",
       "startDate":"2022-01-10",
       "endDate":"2022-01-10",
       "inLanguage":"en",
-      "url":"https://www.swat4ls.org/workshops/leiden2022/",
+      "url":"https://www.workshops.org",
       "instructor":[
         {
           "@type":"Person",
-          "name":"Alban Gaignard",
-          "@id":"https://bioschemas.org/people/AlbanGaignard",
-          "url":"https://bioschemas.org/people/AlbanGaignard"
+          "name":"Alexander Botzki",
+          "@id":"https://orcid.org/0000-0001-6691-4233",
+          "url":"https://orcid.org/0000-0001-6691-4233"
         },{
           "@type":"Person",
-          "name":"Leyla Jael Castro",
-          "@id":"https://bioschemas.org/people/LeylaGarcia",
-          "url":"https://bioschemas.org/people/LeylaGarcia"
-        },{
-          "@type":"Person",
-          "name":"Alasdair Gray",
-          "@id":"https://bioschemas.org/people/AlasdairGray",
-          "url":"https://bioschemas.org/people/AlasdairGray"
+          "name":"Bruna Piereck",
+          "@id":"https://orcid.org/0000-0001-5958-0669",
+          "url":"https://orcid.org/0000-0001-5958-0669"
         }
       ]
     }
@@ -218,16 +219,98 @@ The rather elaborate annotation according to Bioschemas profiles `Course/CourseI
 }
 ```
 
-TODO: add explanation of the various properties and reference the extensive documentation of the Bioschemas profile.
+## HTML code for a training material page
 
-## 1.3 Publish training course and material via github
+Open the tutorial01.html in Edit mode. It has a quite simple structure:
 
-TODO: add content from https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+      <script type="application/ld+json">
+         insert bioschemas annotation here
+      </script>
+  </head>
+  <body>
+     insert content here
+  </body>
+</html>
+```
 
-## 1.4 Validate the annotation
+Since we are annotating a course, we use the Bioschemas profiles `Course/CourseInstance`. The JSON-LD object has several property-value pairs. We have created a table for an easier overview about several important properties we need to fill in or annotate for the Course. If you some explanation about the properties, please have a [detailed look](https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE) on the Bioschemas page.
+
+| property   | values   |
+| :--------- | :--------- |
+| @contect   | https://schema.org/    |
+| @type   | Course    |
+| description   | This guide will show you how to do add Schema.org markup to a GitHub Pages site. |
+| keywords   | Bioschemas, schema.org, JSON-LD, GitHub pages |
+| name   | Adding Schema.org/Bioschemas annotation to a GitHub Pages site |
+| educationalLevel  | beginner |
+| inLanguage  | en-GB |
+| license  |  CC-BY 4.0   |
+
+
+The rather elaborate annotation according to Bioschemas profile `TrainingMaterial` looks like this:
+
+```json
+{
+  "@context":"https://schema.org/",
+  "@type":"LearningResource",
+  "@id": "https://example.com/training-material/12345",
+  "dct:conformsTo":{
+    "@type":"CreativeWork",
+    "@id":"https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+  },
+  "audience":[
+    {
+      "@type":"Audience",
+      "name":"(Markup provider, Markup consumer) WebMaster, people deploying GitHub pages"
+    }
+  ],
+  "description":"This guide will show you how to do add Schema.org markup to a GitHub Pages site.",
+  "keywords":"schema.org, Bioschemas, JSON-LD, GitHub pages",
+  "name":"Adding Schema.org to a GitHub Pages site",
+  "about":[{"@id":"https://schema.org"},{"@id":"http://edamontology.org/topic_0089"}],
+  "author":[
+    {
+      "@type":"Person",
+      "name":"Niall Beard",
+      "@id":"https://orcid.org/0000-0002-2627-0231",
+      "url":"https://bioschemas.org/people/NiallBeard"
+    }
+  ],
+  "educationalLevel":"beginner",
+  "identifier": "http://dx.doi.org/12349302",
+  "inLanguage": "en-UK",
+  "contributor":[
+    {
+      "@type":"Person",
+      "name":"Alasdair Gray",
+      "@id":"https://bioschemas.org/people/AlasdairGray",
+      "url":"https://bioschemas.org/people/AlasdairGray"
+    }
+  ],
+  "teaches": [
+  "The student will be able to recall shell commands", 
+  "The student will be able to write code to copy files", 
+  "The student will be able to discover new commands on their own"
+  ],
+  "dateModified":"2021-07-22",
+  "license":"CC-BY 4.0",
+  "version":2.0
+  }
+```
+This examples uses most of the properties specified in the Bioschemas profile [TrainingMaterial](https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE). It is quite tedious to create the JSON-LD objects manually, so we would recommend to start from the above example as a template.
+  
+
+## Publish training course and material via github
+
+TODO: add content specific for Jekyll
+
+## Validate the markup of the page with the Schema.org validator
 
 Validate the individual page with the [schema.org validator](https://validator.schema.org/) by pasting the URL into the Fetch URL tab. The validation procedure will indicate if you have used non-existing properties of the Bioschemas profile. If error messages are returned, have a look at the troubleshooting section below.
 
-TODO: Add image from TeSS course
+![screenshot of about schema.org validator](https://raw.githubusercontent.com/elixir-europe-training/ELIXIR-TrP-TeSS/refs/heads/main/docs/assets/images/b369eIQ.png)
 
-![screenshot of about schema.org validator](./../assets/images/b369eIQ.png)
