@@ -3,7 +3,7 @@
 [add-bioschemas file='docs/training-material.yaml']
 
 In this scenario, we use a static site generator called Jekyll to transform your plain text into static websites. What are the main component we need to make this basic example work? We need at least one markdown page for the course (overview) which we call index.html, another HTML page tutorial01.html which contains the training material, the rendering mechanism of Jekyll to create and serve the HTML pages on GitHub as web site and ideally a sitemap.xml document to allow easy integration into TeSS.
-We have prepared a github repo with files index.html, tutorial01.html, sitemap.xml as well as the other files for Jekyll. The rendering mechanism will be provided by GitHub itself and will be explained later.
+We have prepared a GitHub repo with files index.html, tutorial01.html, sitemap.xml as well as the other files for Jekyll. The rendering mechanism will be provided by GitHub itself and will be explained later.
 
 ## Bioschemas profiles for training resources
 

@@ -3,7 +3,7 @@
 [add-bioschemas file='docs/training-material.yaml']
 
 What are the main component we need to make this basic example work? We need at least one HTML page for the course (overview) which we call index.html, another HTML page tutorial01.html which contains the training material, a rendering mechanism to serve the HTML pages as web site and ideally a sitemap.xml document to allow easy integration into TeSS.
-We have prepared a github repo with these three files index.html, tutorial01.html and sitemap.xml. The rendering mechanism will be provided by github itself and will be explained later.
+We have prepared a GitHub repo with these three files index.html, tutorial01.html and sitemap.xml. The rendering mechanism will be provided by GitHub itself and will be explained later.
 
 ## Bioschemas profiles for training resources
 
@@ -17,8 +17,8 @@ Note that the `CourseInstance` profile is used in tandem with the `Course` profi
 
 ## Setup of the repository
 
-Let's start with the first step and create a new repository from the [basic Bioschemas tutorial template](https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas-HTML-Template). Once you have opened the link in your browser, you can create a new github repository by clicking on the green 'Use template' button.
-Enter a new name for the created repository e.g. ELIXIR-TrP-Bioschemas-HTML under your own github account.
+Let's start with the first step and create a new repository from the [basic Bioschemas tutorial template](https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas-HTML-Template). Once you have opened the link in your browser, you can create a new GitHub repository by clicking on the green 'Use template' button.
+Enter a new name for the created repository e.g. ELIXIR-TrP-Bioschemas-HTML under your own GitHub account.
 
 As said before, we anticipate the following basic setup: we have one HTML page which describes the course aka the training event called index.html and one HTML file tutorial01.html for the training material. 
 

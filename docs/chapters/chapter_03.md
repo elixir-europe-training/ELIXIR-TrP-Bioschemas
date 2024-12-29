@@ -15,7 +15,7 @@ Note that the `CourseInstance` profile is used in tandem with the `Course` profi
 
 ## Setup of the repository
 
-Let's start with the first step and create a new repository from the [Bioschemas tutorial template for mkdocs](https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas-MkDocs-Template). Once you have opened the link in your browser, you can create a new github repository by clicking on the green 'Use template' button.
+Let's start with the first step and create a new repository from the [Bioschemas tutorial template for mkdocs](https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas-MkDocs-Template). Once you have opened the link in your browser, you can create a new GitHub repository by clicking on the green 'Use template' button.
 Enter a new name for the created repository e.g. ELIXIR-TrP-Bioschemas-mkdocs under your own GitHub account.
 
 ## Markup for a training course page using mkdocs as static site generator
