@@ -27,10 +27,10 @@ We do not describe the way to setup a WordPress sandbox system since it is beyon
 5. Select the `JSON-LD/Custom Code` option in the dropdown of the `Import Schema Code from` field.
 6. Copy and paste the template below in the empty `Custom JSON-LD Code` field.
 7. Click on the `Process Code`
-8. TODO: Click on `Use`
+8. Click on `Use`
 9. Check the `Display Conditions` field to potentially exclude certain `Post types` of the Wordpress system
 
-Template:
+Template for Bioschemas TrainingMaterial profile:
 
 ```json
 {
@@ -105,113 +105,34 @@ Template:
 }
 ```
 
-### Associate the Bioschemas Profile to Post Types
-
-1. TODO: check whether this part is necessary or can be stepped over due to unselection of `Post types` in the Sitemap step
-2. After successfull installation, in the RankMath menu, go to `Schema templates`.
-3. Click on `Add New Schema`
-
-### Configure the Sitemap for your Wordpress system
-
-0. Check whether the sitemap option needs to be activated in the General configuration of the RankMath plugins.
-1. In the RankMath menu, go to `Sitemap Settings`.
-2. In the `General` section, the URL to the sitemap is displayed: `Your sitemap index can be found here: https://your.url.org/sitemap_index.xml`
-3. Manually check all the sections on the left side of the displayed website from `HTML Sitemap` over all `Post Types` and `Taxonomies`. Unselect the slider for all non-relevant Post types and Taxonomies.
-4. Verify the URL whether all relevant links to the pages are shown.
-
-## Code for a training material page
+Template for Bioschemas Course/CourseInstance profile:
 
 ```json
 {
-  "@context":"https://schema.org/",
-  "@type":"LearningResource",
-  "@id": "https://example.com/training-material/12345",
-  "dct:conformsTo":{
-    "@type":"CreativeWork",
-    "@id":"https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
-  },
-  "audience":[
-    {
-      "@type":"Audience",
-      "name":"(Markup provider, Markup consumer) WebMaster, people deploying GitHub pages"
-    }
-  ],
-  "description":"This guide will show you how to do add Schema.org markup to a GitHub Pages site.",
-  "keywords":"schema.org, TeSS, GitHub pages",
-  "name":"Adding Schema.org to a GitHub Pages site",
-  "about":[{"@id":"https://schema.org"},{"@id":"http://edamontology.org/topic_0089"}],
-  "author":[
-    {
-      "@type":"Person",
-      "name":"Niall Beard",
-      "@id":"https://orcid.org/0000-0002-2627-0231",
-      "url":"https://bioschemas.org/people/NiallBeard"
-    }
-  ],
-  "educationalLevel":"beginner",
-  "identifier": "http://dx.doi.org/12349302",
-  "inLanguage": "en-UK",
-  "contributor":[
-    {
-      "@type":"Person",
-      "name":"Alasdair Gray",
-      "@id":"https://bioschemas.org/people/AlasdairGray",
-      "url":"https://bioschemas.org/people/AlasdairGray"
-    }
-  ],
-  "teaches": [
-  "The student will be able to recall shell commands", 
-  "The student will be able to write code to copy files", 
-  "The student will be able to discover new commands on their own"
-  ],
-  "dateModified":"2021-07-22",
-  "license":"CC-BY 4.0",
-    "version":2.0
-  }
-```
-This examples uses most of the properties specified in the Bioschemas profile [TrainingMaterial](https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE). It is quite tedious to create the JSON-LD objects manually, so we would recommend to start from the above example as a template.
-
-In the example code, replace `insert bioschemas annotation here` by the JSON-LD object and save the HTML file.
-
-## HTML code for a training course page
-
-The rather elaborate annotation according to Bioschemas profiles `Course/CourseInstance` looks like this. Note that it is using the annotation for the associated training material, too. This annotation is added via the property `hasPart`.
-
-```json
-{
-   "@context":"https://schema.org/",
-   "@type":"Course",
-  "http://purl.org/dc/terms/conformsTo":{
-    "@type":"CreativeWork",
-    "@id":"https://bioschemas.org/profiles/Course/1.0-RELEASE"
-  },
-  "description":"Bioschemas Tutorial at SWAT4HCLS Leiden",
-  "keywords":"Bioschemas, SWAT4HCLS, Schema validation, Harvesting markup, Deploying markup",
-  "name":"Bioschemas - Deploying and Harvesting Markup",
-  "hasPart":[
-    {"@type":"LearningResource",
-    "@id":"https://dx.doi.org/10.4126/FRL01-006432243",
-    "http://purl.org/dc/terms/conformsTo":{
-      "@type":"CreativeWork",
-      "@id":"https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+  "@context": "https://schema.org",
+  "@graph": {
+    "@type": "Course",
+    "@id": "%url%",
+    "dct:conformsTo": {
+      "@type": "CreativeWork",
+      "@id": "https://bioschemas.org/profiles/Course/1.0-RELEASE"
     },
-    "description":"Bioschemas Tutorial at SWAT4HCLS Leiden",
-    "keywords":"Bioschemas, SWAT4HCLS, Schema validation, Harvesting markup, Deploying markup",
-    "name":"Bioschemas - Deploying and Harvesting Markup"
-    }
-  ],
+  "description": "%seo_description%",
+  "keywords":"Bioschemas, SWAT4HCLS, Schema validation, Harvesting markup, Deploying markup",
+  "name": "%seo_title%",
   "hasCourseInstance":[
     {
       "@type":"CourseInstance",
+      "@id": "%url%",
       "http://purl.org/dc/terms/conformsTo":{
         "@type":"CreativeWork",
-        "@id":"https://bioschemas.org/profiles/CourseInstance/0.8-DRAFT-2020_10_06"
+        "@id":"https://bioschemas.org/profiles/CourseInstance/1.0-RELEASE"
       },
       "courseMode":"online",
       "location":"Virtual, and Fletcher Wellness-Hotel, Leiden, The Netherlands",
       "startDate":"2022-01-10",
       "endDate":"2022-01-10",
-      "inLanguage":"en",
+      "inLanguage":"en-GB",
       "url":"https://www.swat4ls.org/workshops/leiden2022/",
       "instructor":[
         {
@@ -226,7 +147,7 @@ The rather elaborate annotation according to Bioschemas profiles `Course/CourseI
           "url":"https://bioschemas.org/people/LeylaGarcia"
         },{
           "@type":"Person",
-          "name":"Alasdair Gray",
+          "name":"%post_author%",
           "@id":"https://bioschemas.org/people/AlasdairGray",
           "url":"https://bioschemas.org/people/AlasdairGray"
         }
@@ -235,13 +156,34 @@ The rather elaborate annotation according to Bioschemas profiles `Course/CourseI
   ]
 }
 ```
+For further reference, RankMath has provided [step-wise procedures](https://rankmath.com/kb/schema-generator/) for configuring the schema.org templates.
 
-TODO: add explanation of the various properties and reference the extensive documentation of the Bioschemas profile.
+### Configure the Sitemap for your WordPress system
+
+0. Check whether the sitemap option needs to be activated in the General configuration of the RankMath plugins.
+1. In the RankMath menu, go to `Sitemap Settings`.
+2. In the `General` section, the URL to the sitemap is displayed: `Your sitemap index can be found here: https://your.url.org/sitemap_index.xml`
+3. Manually check all the sections on the left side of the displayed website from `HTML Sitemap` over all `Post Types` and `Taxonomies`. Unselect the slider for all non-relevant Post types and Taxonomies.
+4. Verify the URL whether all relevant links to the pages are shown.
+
+## Finetuning of markup for a training material page
+
+1. When using the Gutenberg editor, you will see a RankMath button in the top right corner of the post you would like to edit.
+2. Click on the Schema icon (third from the left) which looks like a certificate.
+3. Click on the blue button `Schema Generator`
+4. Click on `Your templates`
+5. Click on `LearningResource` which is shown in the list of our own templates.
+6. In the subsequent dialogue, overwrite the relevant properties from the template with values specific to your training material.
+7. Check the reference RankMath has provided [step-wise procedures](https://rankmath.com/kb/schema-generator/) on how to add properties if needed.
+8. Click on the blue button `Save for this post` at the bottom of the dialogue. 
+
+RankMath has provided articles in their knowledgebase about finetuning the markup of WordPress posts [here](https://rankmath.com/kb/rich-snippets/).
 
 ## Validate the markup of the page with the Schema.org validator
 
 Validate the individual page with the [schema.org validator](https://validator.schema.org/) by pasting the URL into the Fetch URL tab. The validation procedure will indicate if you have used non-existing properties of the Bioschemas profile. If error messages are returned, have a look at the troubleshooting section below.
 
-![screenshot of about schema.org validator](https://raw.githubusercontent.com/elixir-europe-training/ELIXIR-TrP-TeSS/refs/heads/main/docs/assets/images/b369eIQ.png)
+In this scenario, you can validate the course web site (TODO: add link) and individual tutorial web site (TODO: add link). 
 
+![screenshot of about schema.org validator](https://raw.githubusercontent.com/elixir-europe-training/ELIXIR-TrP-TeSS/refs/heads/main/docs/assets/images/b369eIQ.png)
 
