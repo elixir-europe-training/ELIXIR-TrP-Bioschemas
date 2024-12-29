@@ -70,7 +70,11 @@ Sitemaps can help Google and other search engines to find and understand video a
 
 ## How can I build a sitemap?
 
-TODO: check https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap and https://www.sitemaps.org/protocol.html
+Check https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap and https://www.sitemaps.org/protocol.html on methods how to easily create a sitemap for your content.
 
-TODO: any easy tools for this task with static site generators
+If you use WordPress, we recommend to the use the RankMath plugin since it also provides the feature of [adding a sitemap](https://rankmath.com/kb/html-sitemap/) to your WordPress website.
+
+## Register the sitemap in TeSS for automated ingestion of your training material
+
+In order to increase the findability even more, we strongly recommend to register the sitemap in TeSS. Please follow the [documentation](https://tess.elixir-europe.org/about/registering#automatic) on the TeSS web site or this [ELIXIR tutorial](https://elixir-europe-training.github.io/ELIXIR-TrP-TeSS/chapters/chapter_04/).
 
