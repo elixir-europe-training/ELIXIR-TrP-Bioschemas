@@ -42,5 +42,5 @@ Check it out with your browser at [http://localhost:8000/](http://localhost:8000
 Please cite as
 
 > Bruna Piereck, Phil Reed, & Alexander Botzki. (2025). 
-> The ELIXIR Guide for Bioschemas annotation of training events and material (v1.0.0-alpha). Zenodo. 
-> https://doi.org/10.XXXX/zenodo.YYYYYYY
+> The ELIXIR Guide for Bioschemas annotation of training events and material (v1.0.1). Zenodo. 
+> [https://doi.org/10.XXXX/zenodo.YYYYYYY](https://zenodo.org/badge/DOI/10.5281/zenodo.16438793.svg)
