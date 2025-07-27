@@ -1,0 +1,635 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../chapter_01/">
+      
+      
+      <link rel="icon" href="../../assets/images/elixir_favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+
+
+    
+      
+        <title>1. The annotation of websites - the basics - ELIXIR Guide for Bioschemas Annotation of Training Assets</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-are-the-major-bits-and-pieces-or-how-to-mark-up-your-content-with-bioschemas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ELIXIR Guide for Bioschemas Annotation of Training Assets" class="md-header__button md-logo" aria-label="ELIXIR Guide for Bioschemas Annotation of Training Assets" data-md-component="logo">
+      
+  <img src="../../assets/images/white-orange-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ELIXIR Guide for Bioschemas Annotation of Training Assets
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. The annotation of websites - the basics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    elixir-europe-training/ELIXIR-TrP-Bioschema
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ELIXIR Guide for Bioschemas Annotation of Training Assets" class="md-nav__button md-logo" aria-label="ELIXIR Guide for Bioschemas Annotation of Training Assets" data-md-component="logo">
+      
+  <img src="../../assets/images/white-orange-logo.png" alt="logo">
+
+    </a>
+    ELIXIR Guide for Bioschemas Annotation of Training Assets
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    elixir-europe-training/ELIXIR-TrP-Bioschema
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Course Content
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Course Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. The annotation of websites - the basics
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Bioschemas annotation of an HTML page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Bioschemas with Mkdocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4. Bioschemas with Jekyll
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5. Bioschemas with Wordpress
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6. Sitemap, what is it and how to create
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../follow_up_training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Follow up training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<div><h1 id="what-are-the-major-bits-and-pieces-or-how-to-mark-up-your-content-with-bioschemas">What are the major bits and pieces OR How to mark up your content with Bioschemas?</h1>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "LearningResource",
+    "@id": "https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplate-MkDocs/",
+    "http://purl.org/dc/terms/conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+    },
+    "description": "Template for ELIXIR lessons",
+    "keywords": "FAIR, OPEN, Bioinformatics, Teaching",
+    "name": "ELIXIR Training Lesson template",
+    "license": "CC-BY-4.0",
+    "author": [
+        {
+            "@type": "Person",
+            "name": "Geert van Geest",
+            "email": "geert.vangeest@sib.swiss",
+            "github": "GeertvanGeest",
+            "orcid": "0000-0002-1561-078X"
+        },
+        {
+            "@type": "Person",
+            "name": "Elin Kronander",
+            "github": "elinkronander",
+            "orcid": "0000-0003-0280-6318"
+        }
+    ]
+}
+</script>
+
+<p><img align="right" alt="avatar by juicy_fish &amp; kjpargeter at freepik.com" src="../../assets/images/avatar_perspectives.png"></p>
+<p>Most webmasters are familiar with HTML tags on their pages. Usually, HTML tags tell the browser how to display the information included in the tag. For example, <code>&lt;h1&gt;Avatar&lt;/h1&gt;</code> tells the browser to display the text string “Avatar” in a heading 1 (h1) format. However, the HTML tag doesn’t give any information about what that text string “Avatar” means. It could refer to the hugely successful 3D movie, or it could refer to a type of profile picture. Missing a clear definition can make it more difficult for search engines to intelligently display relevant content to a user.</p>
+<p>With the goal to help search engines understand the web content better, webmasters use <a href="https://schema.org">Schema.org</a> to add <strong>structured data</strong> to their websites. Schema.org helps webmasters to provide a collection of shared <strong>vocabularies</strong> which they can use to mark up their pages in ways that can be understood by the major search engines: Google, Microsoft and alike. This can lead to improved search rankings and more attractive search results. The term vocabulary in this broad context refers to a set of <strong>types</strong> and <strong>properties</strong> used to describe different content, such as products, reviews, or events. Each content type has an extensive set of associated properties. At the end of 2024, Schema.org lists more than 800 types with close to 1500 properties. Altogether they form the allowed vocabulary, webmasters can use to mark up their websites. How can this markup be included on websites? Webmasters can choose three different formats to add information to their Web content: <a href="https://en.wikipedia.org/wiki/JSON-LD">JSON-LD</a>, <a href="https://en.wikipedia.org/wiki/Microdata_(HTML)">Microdata</a>, or <a href="https://en.wikipedia.org/wiki/RDFa">RDFa</a> formats. </p>
+<p>As training providers, we can also use these structured data to increase findability of our training-related content in web browsers. The <strong><a href="https://bioschemas.org/">Bioschemas</a></strong> community aims to improve the <strong>findability</strong> on the web of life sciences resources such as datasets, software, and <strong>training materials</strong>. It does this by encouraging people in the life sciences to use Schema.org markup in their websites so that they are indexable by search engines and other services. They define usage <strong>profiles</strong> over the Schema.org types that identify the essential properties to use in describing a resource. This guide will help get you up to speed with Bioschemas and the <strong>JSON-LD</strong> format so that you can start adding markup to your web pages. Although this guide focuses on Bioschemas and JSON-LD objects, the basic ideas (types, properties etc.) introduced here are relevant beyond JSON-LD and apply for other markup with microdata or RDFa.</p>
+<h1 id="bioschemas-profiles-for-training-resources">Bioschemas profiles for training resources</h1>
+<p>Many training related resources will include pages describing tutorials or courses. As such, they are marked up using the following three profiles:</p>
+<ul>
+<li><code>TrainingMaterial</code>: A profile describing training materials in life sciences, it can be used on its own (as it happens with the Bioschemas tutorials) or in combination with a <code>CourseInstance</code>.</li>
+<li><code>Course</code>: A profile describing a course from a generic point of view, i.e., the learning objectives of a course rather than where and when it is delivered.</li>
+<li><code>CourseInstance</code>: A profile describing a particular instance of a course, i.e., an edition of a course that is scheduled for specific dates and happening in a specific location (that of course can be online or on-site, virtual or real).</li>
+</ul>
+<p>Note that the <code>CourseInstance</code> profile is used in tandem with the <code>Course</code> profile, i.e., a <code>CourseInstance</code> does not exist without a <code>Course</code> but a <code>Course</code> can exist without a <code>CourseInstance</code> (there are no current offerings of the course).</p>
+<p><img alt="bioschema use cases" src="../../assets/images/profiles_training.png"></p>
+<h1 id="use-cases-described-in-this-guide">Use cases described in this guide</h1>
+<p>In this guide, we will describe three different scenarios: the first one being a simple situation with static HTML pages in a GitHub repository containing the course description and the tutorial – secondly, hosting training material content using static site generators like mkdocs or Jekyll and lastly, providing the training content via a Content Management System like WordPress.</p>
+<p><img alt="bioschema use cases" src="../../assets/images/Bioschemas_usecases.png"></p>
+<h1 id="why-do-we-use-a-sitemap-to-indicate-where-our-training-content-is-on-the-website">Why do we use a sitemap to indicate where our training content is on the website?</h1>
+<p><img align="left" alt="sitemap drawing" src="../../assets/images/sitemap_drawing.png"></p>
+<p>A sitemap is a file where you provide information about the pages, videos, and other files on your site, and the relationships between them. Search engines like Google read this file to crawl your site more efficiently. A sitemap helps search engines discover URLs on your site. The sitemap will be important so that scrapers like the Bioschemas scraper developed by the TeSS team can find your pages and their structured metadata increasing the findability of the training material.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: About">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                About
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter_01/" class="md-footer__link md-footer__link--next" aria-label="Next: 2. Bioschemas annotation of an HTML page">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                2. Bioschemas annotation of an HTML page
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      By the ELIXIR Training Platform
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.footer", "toc.integrate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

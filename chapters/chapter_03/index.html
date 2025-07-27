@@ -1,0 +1,863 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapter_01/">
+      
+      
+        <link rel="next" href="../chapter_02/">
+      
+      
+      <link rel="icon" href="../../assets/images/elixir_favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+
+
+    
+      
+        <title>3. Bioschemas with Mkdocs - ELIXIR Guide for Bioschemas Annotation of Training Assets</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ELIXIR Guide for Bioschemas Annotation of Training Assets" class="md-header__button md-logo" aria-label="ELIXIR Guide for Bioschemas Annotation of Training Assets" data-md-component="logo">
+      
+  <img src="../../assets/images/white-orange-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ELIXIR Guide for Bioschemas Annotation of Training Assets
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. Bioschemas with Mkdocs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    elixir-europe-training/ELIXIR-TrP-Bioschema
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ELIXIR Guide for Bioschemas Annotation of Training Assets" class="md-nav__button md-logo" aria-label="ELIXIR Guide for Bioschemas Annotation of Training Assets" data-md-component="logo">
+      
+  <img src="../../assets/images/white-orange-logo.png" alt="logo">
+
+    </a>
+    ELIXIR Guide for Bioschemas Annotation of Training Assets
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    elixir-europe-training/ELIXIR-TrP-Bioschema
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Course Content
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Course Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_00/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. The annotation of websites - the basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Bioschemas annotation of an HTML page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3. Bioschemas with Mkdocs
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Bioschemas with Mkdocs
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bioschemas-profiles-for-training-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bioschemas profiles for training resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-of-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup of the repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markup-for-a-training-course-page-using-mkdocs-as-static-site-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markup for a training course page using mkdocs as static site generator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markup-for-a-training-material-page-using-mkdocs-as-static-site-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markup for a training material page using mkdocs as static site generator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-training-course-and-material-via-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish training course and material via GitHub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-the-markup-of-the-page-with-the-schemaorg-validator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate the markup of the page with the Schema.org validator
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4. Bioschemas with Jekyll
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5. Bioschemas with Wordpress
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6. Sitemap, what is it and how to create
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../follow_up_training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Follow up training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>3. Bioschemas with Mkdocs</h1>
+
+<div><h2 id="introduction">Introduction</h2>
+<p>In this example, we use the ELIXIR Lesson template since it uses mkdocs as static site generator and comes with a Python library <a href="https://pypi.org/project/addbioschemas/">addbioschemas</a> which makes adding Bioschemas markup quite easy.
+For the ELIXIR Lesson template, an extensive tutorial has been <a href="https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplateInstructions-MkDocs/">published</a> which describes Bioschemas markup using addbioschemas.</p>
+<h2 id="bioschemas-profiles-for-training-resources">Bioschemas profiles for training resources</h2>
+<p>Many training related resources will include pages describing tutorials or courses. As such, they are marked up using the following three profiles:</p>
+<ul>
+<li><code>TrainingMaterial</code>: A profile describing training materials in life sciences, it can be used on its own (as it happens with the Bioschemas tutorials) or in combination with a <code>CourseInstance</code>.</li>
+<li><code>Course</code>: A profile describing a course from a generic point of view, i.e., the learning objectives of a course rather than where and when it is delivered.</li>
+<li><code>CourseInstance</code>: A profile describing a particular instance of a course, i.e., an edition of a course that is scheduled for specific dates and happening in a specific location (that of course can be online or on-site, virtual or real).</li>
+</ul>
+<p>Note that the <code>CourseInstance</code> profile is used in tandem with the <code>Course</code> profile, i.e., a <code>CourseInstance</code> does not exist without a <code>Course</code> but a <code>Course</code> can exist without a <code>CourseInstance</code> (there are no current offerings of the course).</p>
+<h2 id="setup-of-the-repository">Setup of the repository</h2>
+<p>Let’s start with the first step and create a new repository from the <a href="https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas-MkDocs-Template">Bioschemas tutorial template for mkdocs</a>. Once you have opened the link in your browser, you can create a new GitHub repository by clicking on the green ‘Use template’ button.
+Enter a new name for the created repository e.g. ELIXIR-TrP-Bioschemas-mkdocs under your own GitHub account.</p>
+<h2 id="markup-for-a-training-course-page-using-mkdocs-as-static-site-generator">Markup for a training course page using mkdocs as static site generator</h2>
+<p>We reuse the technical <a href="https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplateInstructions-MkDocs/chapters/chapter_02/#adding-bioschemas-markup">instruction</a> given in the ELIXIR Lesson template tutorial to add markup using the libray addbioschemas. But instead of using an annotation according to Bioschemas profile <code>LearningResource</code> we start with the profiles <code>Course/CourseInstance</code>.</p>
+<p>Open the file <code>_data/metadata.yml</code> and add the following:</p>
+<div class="highlight"><pre><span></span><code><span class="s">"@context"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://schema.org/</span>
+<span class="s">"@type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Course</span>
+<span class="s">"@id"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplate-MkDocs/</span>
+<span class="nt">http://purl.org/dc/terms/conformsTo</span><span class="p">:</span>
+<span class="w">  </span><span class="s">"@type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CreativeWork</span>
+<span class="w">  </span><span class="s">"@id"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bioschemas.org/profiles/Course/1.0-RELEASE</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ELIXIR Bioschemas Annotation Guide</span>
+<span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bioschemas, Schema validation, Harvesting markup, Deploying markup</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bioschemas Annotation Guide for training material</span>
+<span class="c1"># lookup at https://spdx.org/licenses/</span>
+<span class="nt">license</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CC-BY-4.0</span>
+<span class="nt">educationalLevel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">beginner</span>
+<span class="nt">teaches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span>
+<span class="w">  </span><span class="s">"The</span><span class="nv"> </span><span class="s">student</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">able</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">recall</span><span class="nv"> </span><span class="s">shell</span><span class="nv"> </span><span class="s">commands"</span><span class="p p-Indicator">,</span><span class="w"> </span>
+<span class="w">  </span><span class="s">"The</span><span class="nv"> </span><span class="s">student</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">able</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">write</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">copy</span><span class="nv"> </span><span class="s">files"</span><span class="p p-Indicator">,</span><span class="w"> </span>
+<span class="w">  </span><span class="s">"The</span><span class="nv"> </span><span class="s">student</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">able</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">discover</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">commands</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">own"</span>
+<span class="w">  </span><span class="p p-Indicator">]</span>
+<span class="nt">hasCourseInstance</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"@type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CourseInstance</span>
+<span class="w">  </span><span class="nt">courseMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">online</span>
+<span class="w">  </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Virtual</span>
+<span class="w">  </span><span class="nt">startDate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2022-01-10</span>
+<span class="w">  </span><span class="nt">endDate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2022-01-10</span>
+<span class="w">  </span><span class="nt">inLanguage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en-GB</span>
+<span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.workshops.org</span>
+<span class="w">  </span><span class="nt">http://purl.org/dc/terms/conformsTo</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"@type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CreativeWork</span>
+<span class="w">    </span><span class="s">"@id"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bioschemas.org/profiles/CourseInstance/1.0-RELEASE</span><span class="w">  </span>
+<span class="w">  </span><span class="nt">instructor</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"@type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Person</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Elin Kronander</span>
+<span class="w">    </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://orcid.org/0000-0003-0280-6318</span>
+</code></pre></div>
+<p>The rather elaborate annotation according to Bioschemas profiles <code>Course/CourseInstance</code> which will be created by the bioschemas library looks like this.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">   </span><span class="nt">"@context"</span><span class="p">:</span><span class="s2">"https://schema.org/"</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">"@type"</span><span class="p">:</span><span class="s2">"Course"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"http://purl.org/dc/terms/conformsTo"</span><span class="p">:{</span>
+<span class="w">    </span><span class="nt">"@type"</span><span class="p">:</span><span class="s2">"CreativeWork"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"@id"</span><span class="p">:</span><span class="s2">"https://bioschemas.org/profiles/Course/1.0-RELEASE"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"description"</span><span class="p">:</span><span class="s2">"Bioschemas Tutorial at SWAT4HCLS Leiden"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"keywords"</span><span class="p">:</span><span class="s2">"Bioschemas, SWAT4HCLS, Schema validation, Harvesting markup, Deploying markup"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"Bioschemas - Deploying and Harvesting Markup"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"hasCourseInstance"</span><span class="p">:[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"@type"</span><span class="p">:</span><span class="s2">"CourseInstance"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"http://purl.org/dc/terms/conformsTo"</span><span class="p">:{</span>
+<span class="w">        </span><span class="nt">"@type"</span><span class="p">:</span><span class="s2">"CreativeWork"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"@id"</span><span class="p">:</span><span class="s2">"https://bioschemas.org/profiles/CourseInstance/0.8-DRAFT-2020_10_06"</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">"courseMode"</span><span class="p">:</span><span class="s2">"online"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"location"</span><span class="p">:</span><span class="s2">"Virtual, and Fletcher Wellness-Hotel, Leiden, The Netherlands"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"startDate"</span><span class="p">:</span><span class="s2">"2022-01-10"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"endDate"</span><span class="p">:</span><span class="s2">"2022-01-10"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"inLanguage"</span><span class="p">:</span><span class="s2">"en"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"url"</span><span class="p">:</span><span class="s2">"https://www.swat4ls.org/workshops/leiden2022/"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"instructor"</span><span class="p">:[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"@type"</span><span class="p">:</span><span class="s2">"Person"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"Alban Gaignard"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"@id"</span><span class="p">:</span><span class="s2">"https://bioschemas.org/people/AlbanGaignard"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"url"</span><span class="p">:</span><span class="s2">"https://bioschemas.org/people/AlbanGaignard"</span>
+<span class="w">        </span><span class="p">},{</span>
+<span class="w">          </span><span class="nt">"@type"</span><span class="p">:</span><span class="s2">"Person"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"Leyla Jael Castro"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"@id"</span><span class="p">:</span><span class="s2">"https://bioschemas.org/people/LeylaGarcia"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"url"</span><span class="p">:</span><span class="s2">"https://bioschemas.org/people/LeylaGarcia"</span>
+<span class="w">        </span><span class="p">},{</span>
+<span class="w">          </span><span class="nt">"@type"</span><span class="p">:</span><span class="s2">"Person"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"Alasdair Gray"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"@id"</span><span class="p">:</span><span class="s2">"https://bioschemas.org/people/AlasdairGray"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"url"</span><span class="p">:</span><span class="s2">"https://bioschemas.org/people/AlasdairGray"</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="markup-for-a-training-material-page-using-mkdocs-as-static-site-generator">Markup for a training material page using mkdocs as static site generator</h2>
+<p>We reuse the technical <a href="https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplateInstructions-MkDocs/chapters/chapter_02/#adding-bioschemas-markup">instruction</a> given in the ELIXIR Lesson template tutorial to add markup using the libray addbioschemas. 
+In this example, we use an annotation according to Bioschemas profile <code>LearningResource</code>.</p>
+<p>We will use a <a href="https://en.wikipedia.org/wiki/YAML">yaml</a> file to specify the markup using the Bioschemas profile. In order to have the tutorial marked up with the Bioschemas annotation, it is important to add a specific instruction to the markdown file which contains the <a href="docs/chapters/chapter_01.md">initial version of the tutorial file</a>.</p>
+<p>In combination with mkdocs-material, this specific instruction should be placed after markdown text, so never at the very top of the page.</p>
+<div class="highlight"><pre><span></span><code><span class="gu">## 1.1 First subtopic</span>
+
+[add-bioschemas file='_data/training-material.yml']
+
+Here you can enter text and create inline citations[^Garcia2020] by using the bibtex plugin. Add your references in <span class="sb">`references.bib`</span>, and cite [^hoebelheinrich_nancy_j_2022_6769695] by adding the <span class="ni">@refid</span> inside brackets like this ``
+...
+</code></pre></div>
+<p>Create a file <code>_data/training-material.yml</code> and add the following yaml:</p>
+<div class="highlight"><pre><span></span><code><span class="s">"@context"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://schema.org/</span>
+<span class="s">"@type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LearningResource</span>
+<span class="s">"@id"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplate-MkDocs/</span>
+<span class="nt">http://purl.org/dc/terms/conformsTo</span><span class="p">:</span>
+<span class="w">  </span><span class="s">"@type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CreativeWork</span>
+<span class="w">  </span><span class="s">"@id"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ELIXIR Bioschemas Annotation Guide</span>
+<span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bioschemas, Schema validation, Harvesting markup, Deploying markup</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bioschemas Annotation Guide for training material</span>
+<span class="c1"># lookup at https://spdx.org/licenses/</span>
+<span class="nt">license</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CC-BY-4.0</span>
+<span class="nt">inLanguage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en-GB</span>
+<span class="nt">educationalLevel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">beginner</span>
+<span class="nt">teaches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span>
+<span class="w">  </span><span class="s">"The</span><span class="nv"> </span><span class="s">student</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">able</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">main</span><span class="nv"> </span><span class="s">Bioschemas</span><span class="nv"> </span><span class="s">profiles"</span><span class="p p-Indicator">,</span><span class="w"> </span>
+<span class="w">  </span><span class="s">"The</span><span class="nv"> </span><span class="s">student</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">able</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">write</span><span class="nv"> </span><span class="s">Bioschemas</span><span class="nv"> </span><span class="s">markup"</span><span class="w"> </span>
+<span class="w">  </span><span class="p p-Indicator">]</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0</span>
+<span class="nt">author</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"@type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Person</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Niall Beard</span>
+<span class="w">    </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://orcid.org/0000-0002-2627-0231</span>
+<span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://orcid.org/0000-0002-2627-0231</span>
+</code></pre></div>
+<p>This <code>YAML</code> file is processed by the bioschemas library to embed the following JSON-LD within the created tutorial web page. The rather elaborate annotation according to Bioschemas profile <code>TrainingMaterial</code> looks like this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"@context"</span><span class="p">:</span><span class="s2">"https://schema.org/"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"@type"</span><span class="p">:</span><span class="s2">"LearningResource"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/training-material/12345"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"dct:conformsTo"</span><span class="p">:{</span>
+<span class="w">    </span><span class="nt">"@type"</span><span class="p">:</span><span class="s2">"CreativeWork"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"@id"</span><span class="p">:</span><span class="s2">"https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"description"</span><span class="p">:</span><span class="s2">"This guide will show you how to do add Schema.org markup to a GitHub Pages site."</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"keywords"</span><span class="p">:</span><span class="s2">"schema.org, TeSS, GitHub pages"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"Adding Schema.org to a GitHub Pages site"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"about"</span><span class="p">:,</span>
+<span class="w">  </span><span class="nt">"author"</span><span class="p">:[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"@type"</span><span class="p">:</span><span class="s2">"Person"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"Niall Beard"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"@id"</span><span class="p">:</span><span class="s2">"https://orcid.org/0000-0002-2627-0231"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"url"</span><span class="p">:</span><span class="s2">"https://bioschemas.org/people/NiallBeard"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"educationalLevel"</span><span class="p">:</span><span class="s2">"beginner"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://dx.doi.org/12349302"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"inLanguage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en-UK"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"teaches"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="s2">"The student will be able to list the main Bioschemas profiles"</span><span class="p">,</span><span class="w"> </span>
+<span class="w">  </span><span class="s2">"The student will be able to write Bioschemas markup"</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"dateModified"</span><span class="p">:</span><span class="s2">"2021-07-22"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"license"</span><span class="p">:</span><span class="s2">"CC-BY 4.0"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"version"</span><span class="p">:</span><span class="mf">2.0</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<p>This examples uses most of the properties specified in the Bioschemas profile <a href="https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE">TrainingMaterial</a>. </p>
+<p>Once you have inserted the special instruction, save the markdown file file.</p>
+<h2 id="publish-training-course-and-material-via-github">Publish training course and material via GitHub</h2>
+<p>Start the publishing process by following these <a href="https://elixir-europe-training.github.io/ELIXIR-TrP-LessonTemplateInstructions-MkDocs/chapters/chapter_01/">instructions</a>.</p>
+<p>TODO: add specific instructions for this forked template.</p>
+<h2 id="validate-the-markup-of-the-page-with-the-schemaorg-validator">Validate the markup of the page with the Schema.org validator</h2>
+<p>Validate the individual page with the <a href="https://validator.schema.org/">schema.org validator</a> by pasting the URL into the Fetch URL tab. The validation procedure will indicate if you have used non-existing properties of the Bioschemas profile. If error messages are returned, have a look at the troubleshooting section below.</p>
+<p>In this scenario, you can validate the course web site (TODO: add link) and individual tutorial web site (TODO: add link). </p>
+<p><img alt="screenshot of about schema.org validator" src="https://raw.githubusercontent.com/elixir-europe-training/ELIXIR-TrP-TeSS/refs/heads/main/docs/assets/images/b369eIQ.png"></p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:Garcia2020">
+<p>Leyla Garcia, Bérénice Batut, Melissa L. Burke, Mateusz Kuzak, Fotis Psomopoulos, Ricardo Arcila, Teresa K. Attwood, Niall Beard, Denise Carvalho-Silva, Alexandros C. Dimopoulos, Victoria Dominguez Del Angel, Michel Dumontier, Kim T. Gurwitz, Roland Krause, Peter McQuilton, Loredana Le Pera, Sarah L. Morgan, Päivi Rauste, Allegra Via, Pascal Kahlem, Gabriella Rustici, Celia W.G. Van Gelder, and Patricia M. Palagi. Ten simple rules for making training materials FAIR. <em>PLoS Computational Biology</em>, 16(5):1–9, 2020. <a href="https://doi.org/10.1371/journal.pcbi.1007854">doi:10.1371/journal.pcbi.1007854</a>. <a class="footnote-backref" href="#fnref:Garcia2020" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:hoebelheinrich_nancy_j_2022_6769695">
+<p>Nancy J Hoebelheinrich, Katarzyna Biernacka, Michelle Brazas, Leyla Jael Castro, Nicola Fiore, Margareta Hellstrom, Emma Lazzeri, Ellen Leenarts, Paula Maria Martinez Lavanchy, Elizabeth Newbold, Amy Nurnberger, Esther Plomp, Lucia Vaira, Celia W G van Gelder, and Angus Whyte. Recommendations for a minimal metadata set to aid harmonised discovery of learning resources. June 2022. URL: <a href="https://doi.org/10.15497/RDA00073">https://doi.org/10.15497/RDA00073</a>, <a href="https://doi.org/10.15497/RDA00073">doi:10.15497/RDA00073</a>. <a class="footnote-backref" href="#fnref:hoebelheinrich_nancy_j_2022_6769695" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+</ol>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../chapter_01/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. Bioschemas annotation of an HTML page">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2. Bioschemas annotation of an HTML page
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter_02/" class="md-footer__link md-footer__link--next" aria-label="Next: 4. Bioschemas with Jekyll">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                4. Bioschemas with Jekyll
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      By the ELIXIR Training Platform
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.footer", "toc.integrate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>
