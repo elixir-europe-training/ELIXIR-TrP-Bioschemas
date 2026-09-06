@@ -34,13 +34,7 @@ repo_url: https://github.com/elixir-europe-training/ELIXIR-TrP-Bioschemas
 edit_uri: edit/main/docs/
 
 plugins:
-  - tags:
-      tags_file: keywords.md
   - search
-  - bibtex:
-      bib_file: "references.bib"
-  - mkdocs-video # embed videos to the docs
-
   
 # Footer
 copyright: By the ELIXIR Training Platform
